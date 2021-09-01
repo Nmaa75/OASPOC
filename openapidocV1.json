@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="nofollow" />
+    <title>Relativity.Infrastructure.SDK 4.1.0 - FuGet Gallery</title>
+        <meta name="twitter:card" content="summary" />
+        <meta name="og:url" content="http://www.fuget.org/packages/Relativity.Infrastructure.SDK/4.1.0/content/openapidocV1.json" />
+        <meta name="og:title" content="Relativity.Infrastructure.SDK 4.1.0" />
+        <meta name="og:description" content="The Relativity Infrastructure SDK for interacting with our Infrastructure APIs via .NET" />
+        <meta name="og:image" content="https://www.relativity.com/images/relativity-nuget-logo.png" />
+    <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css" />
+    <link rel="stylesheet" href="/css/site.css?v=Bk8I9aozBDNnvK6oWdvmNIXIpyTobJJc3h8lcHbm-Ws" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118756821-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-118756821-1');
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button> -->
+                <a href="/" class="navbar-brand" style="padding-right:2em">fuget.org</a>
+                <form id="searchForm" class="input-group" action="/packages" method="GET" style="margin-top:0.6em;width:20em">
+                    <input name="q" id="packageSearch" type="text" class="form-control" placeholder="Search Packages"
+                           style="background-color:#444;border-color:#444;color:#fff;border-radius:0.5em;outline:none;box-shadow:none;"
+                           autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        
+
+<header>
+    <h1>
+        <a href="/packages/Relativity.Infrastructure.SDK">
+            <img src="https://www.relativity.com/images/relativity-nuget-logo.png" class="package-icon" width="64" height="64" onError="this.onerror=null;this.src='/images/no-icon.png';" />
+        </a>
+        <a href="/packages/Relativity.Infrastructure.SDK">Relativity.Infrastructure.SDK</a>
+        <small>by Relativity ODA LLC</small>
+        <a href="/packages/Relativity.Infrastructure.SDK/badges"><img src="/packages/Relativity.Infrastructure.SDK/badge.svg?v=4.1.0" /></a>
+    </h1>
+    <nav>
+        <div class="btn-group" style="display: inline-block">
+            <button type="button" class="btn btn-default version">4.1.0 <small>26 May 21</small></button>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+                    <li><strong style="padding-left:0.5em">Version 4</strong></li>
+                        <li><a href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure" class="version">4.1.0 <small>26 May 21</small></a></li>
+                        <li><a href="/packages/Relativity.Infrastructure.SDK/4.0.3/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure" class="version">4.0.3 <small>21 May 21</small></a></li>
+            </ul>
+        </div>
+        <div class="btn-group" style="display: inline-block">
+            <button type="button" class="btn btn-default">
+                API Diff
+            </button>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+                    <li><strong style="padding-left:0.5em">Version 4</strong></li>
+                        <li><a href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/diff/4.1.0/" class="version">4.1.0 <small>26 May 21</small></a></li>
+                        <li><a href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/diff/4.0.3/" class="version">4.0.3 <small>21 May 21</small></a></li>
+            </ul>
+        </div>
+        <a href="https://www.nuget.org/api/v2/package/relativity.infrastructure.sdk/4.1.0" type="button" class="btn btn-default" style="color:#777">
+            <span class="glyphicon glyphicon-download" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.SDK.4.1.0.nupkg
+        </a>
+        <a href="https://www.nuget.org/packages/Relativity.Infrastructure.SDK/4.1.0" type="button" class="btn btn-default" style="color: #777">
+            <span class="glyphicon glyphicon-link" aria-hidden="true"></span>&nbsp;nuget.org
+        </a>
+            <a href="https://platform.relativity.com/" type="button" class="btn btn-default" style="color:#777">
+                <span class="glyphicon glyphicon-link" aria-hidden="true"></span>&nbsp;platform.relativity.com
+            </a>
+            <a href="https://aka.ms/deprecateLicenseUrl" type="button" class="btn btn-default" style="color: #777">
+                <span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span>&nbsp;License
+            </a>
+    </nav>
+
+    <div class="code add-package-code">&lt;<span class="c-pr">PackageReference</span> <span class="c-tr">Include</span>=<span class="c-st" style="font-weight:bold">"Relativity.Infrastructure.SDK"</span> <span class="c-tr">Version</span>=<span class="c-st" style="font-weight:bold">"4.1.0"</span> /&gt;</div>
+
+
+        <nav style="margin-top:0em;line-height:2.75em;">
+            <h4 style="margin-top:0.5em;color:#777;display:inline-block;margin-right:0.5em;padding:0;">Frameworks</h4>
+                <a class="btn btn-info btn-sm active" style="font-weight:bold;color:#fff" role="button"
+                   href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure">net462</a>
+        </nav>
+
+        <nav style="margin-top:0em;line-height:2.75em;">
+            <h4 style="margin-top:0.5em;color:#777;display:inline-block;margin-right:0.5em;padding:0;">Dependencies</h4>
+                <a class="btn btn-default btn-sm" style="color:#777"
+                   href="/packages/Relativity.Kepler/2.4.0">
+                    <span class="fugeticon fugeticon-package" aria-hidden="true"></span>&nbsp;Relativity.Kepler&nbsp;2.4.0
+                </a>
+                <a class="btn btn-default btn-sm" style="color:#777"
+                   href="/packages/Relativity.Shared.SDK/1.7.0">
+                    <span class="fugeticon fugeticon-package" aria-hidden="true"></span>&nbsp;Relativity.Shared.SDK&nbsp;1.7.0
+                </a>
+        </nav>
+
+
+    <hr style="margin-top:2em;" />
+</header>
+
+    <div id="api" class="row" style="margin-bottom:4em;">
+        <div class="col-xs-12 col-sm-3 sidenav">
+                <h3 style="color:#777;margin-top:0em;margin-bottom:0em">.NET API <small style="color:#777;">101,784 bytes</small></h3>
+
+            <form class="form-inline" style="margin-top: 0.5em;">
+                <input id="asearch" type="search" class="form-control" placeholder="Search"
+                       autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+                       style="margin-bottom:1em;" />
+            </form>
+
+            <nav id="anav">
+
+                    <h4>Assemblies</h4>
+                    <ul class="pkglist">
+                            <li>
+                                <a class="active public-api"
+                                   href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll">
+                                   <span class="fugeticon fugeticon-assembly" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.dll
+                                </a>
+                            </li>
+                    </ul>
+                    <h4>Namespaces</h4>
+                    <ul class="pkglist">
+                                <li>
+                                    <a class="active public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.Agent">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.Agent
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.Agent.Models">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.Agent.Models
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.AgentServerManager">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.AgentServerManager
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.AgentServerManager.Models">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.AgentServerManager.Models
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.AnalyticsServer">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.AnalyticsServer
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.AnalyticsServer.Models">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.AnalyticsServer.Models
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.CacheLocationServer">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.CacheLocationServer
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.CacheLocationServer.Models">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.CacheLocationServer.Models
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.FileRepositoryServer">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.FileRepositoryServer
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.FileRepositoryServer.Models">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.FileRepositoryServer.Models
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.Notifications">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.Notifications
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.Notifications.Models">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.Notifications.Models
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.ResourcePool">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.ResourcePool
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.ResourcePool.Models">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.ResourcePool.Models
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.ResourceServer">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.ResourceServer
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.ResourceServer.Models">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.ResourceServer.Models
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.ServicesServer">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.ServicesServer
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.ServicesServer.Models">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.ServicesServer.Models
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.Shared.Models">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.Shared.Models
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.SQLDistributed">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.SQLDistributed
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.SQLDistributed.Models">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.SQLDistributed.Models
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.SQLPrimary">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.SQLPrimary
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.SQLPrimary.Models">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.SQLPrimary.Models
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.WebApiFormsAuthServerManager">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.WebApiFormsAuthServerManager
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.WebApiFormsAuthServerManager.Models">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.WebApiFormsAuthServerManager.Models
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.WebApiServer">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.WebApiServer
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.WebApiServer.Models">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.WebApiServer.Models
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.WebApiWindowsAuthServer">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.WebApiWindowsAuthServer
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.WebApiWindowsAuthServer.Models">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.WebApiWindowsAuthServer.Models
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.WebBackgroundProcessingServer">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.WebBackgroundProcessingServer
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.WebBackgroundProcessingServer.Models">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.WebBackgroundProcessingServer.Models
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.WebDistributedFormsAuthServer">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.WebDistributedFormsAuthServer
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.WebDistributedFormsAuthServer.Models">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.WebDistributedFormsAuthServer.Models
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.WebDistributedServer">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.WebDistributedServer
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.WebDistributedServer.Models">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.WebDistributedServer.Models
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.WebDistributedWindowsAuthServer">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.WebDistributedWindowsAuthServer
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.WebDistributedWindowsAuthServer.Models">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.WebDistributedWindowsAuthServer.Models
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.WebFormsAuthServer">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.WebFormsAuthServer
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.WebFormsAuthServer.Models">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.WebFormsAuthServer.Models
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.WebServerManager">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.WebServerManager
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.WebServerManager.Models">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.WebServerManager.Models
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.WebWindowsAuthServer">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.WebWindowsAuthServer
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.WebWindowsAuthServer.Models">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.WebWindowsAuthServer.Models
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.WorkerManagerServer">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.WorkerManagerServer
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.WorkerManagerServer.Models">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.WorkerManagerServer.Models
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.WorkerServer">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.WorkerServer
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure.V1.WorkerServer.Models">
+                                        <span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.V1.WorkerServer.Models
+                                    </a>
+                                </li>
+                    </ul>
+                    <h4 id="types">Types</h4>
+                    <ul class="long-item-list">
+                                <li>
+                                    <a class="public-api"
+                                       href="/packages/Relativity.Infrastructure.SDK/4.1.0/lib/net462/Relativity.Infrastructure.dll/Relativity.Infrastructure/IRelativityInfrastructureModule">
+                                        <span class="fugeticon fugeticon-interface" aria-hidden="true"></span>&nbsp;IRelativityInfrastructureModule
+                                    </a>
+                                </li>
+                    </ul>
+                    <h4>Content</h4>
+                    <ul class="pkglist">
+                            <li>
+                                <a style="font-weight:normal;color:#777;"
+                                   href="/packages/Relativity.Infrastructure.SDK/4.1.0/content/openapidocV1.json">
+                                    <span class="fugeticon fugeticon-file" aria-hidden="true"></span>&nbsp;openapidocV1.json
+                                </a>
+                            </li>
+                    </ul>
+            </nav>
+        </div>
+        <div class="col-xs-12 col-sm-9" id="code">
+            <article>
+                    <h1 id="package" style="margin-top:0"><span class="fugeticon fugeticon-package" aria-hidden="true"></span>&nbsp;Relativity.Infrastructure.SDK <small>4.1.0</small></h1>
+                    <p class="description-section">The Relativity Infrastructure SDK for interacting with our Infrastructure APIs via .NET</p>
+                    <pre><code>&lt;package xmlns=&quot;http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd&quot;&gt;&#xD;&#xA;  &lt;metadata&gt;&#xD;&#xA;    &lt;id&gt;Relativity.Infrastructure.SDK&lt;/id&gt;&#xD;&#xA;    &lt;version&gt;4.1.0&lt;/version&gt;&#xD;&#xA;    &lt;title&gt;Relativity.Infrastructure SDK&lt;/title&gt;&#xD;&#xA;    &lt;authors&gt;Relativity ODA LLC&lt;/authors&gt;&#xD;&#xA;    &lt;owners&gt;Relativity ODA LLC&lt;/owners&gt;&#xD;&#xA;    &lt;requireLicenseAcceptance&gt;true&lt;/requireLicenseAcceptance&gt;&#xD;&#xA;    &lt;license type=&quot;file&quot;&gt;LICENSE.txt&lt;/license&gt;&#xD;&#xA;    &lt;licenseUrl&gt;https://aka.ms/deprecateLicenseUrl&lt;/licenseUrl&gt;&#xD;&#xA;    &lt;projectUrl&gt;https://platform.relativity.com/&lt;/projectUrl&gt;&#xD;&#xA;    &lt;iconUrl&gt;https://www.relativity.com/images/relativity-nuget-logo.png&lt;/iconUrl&gt;&#xD;&#xA;    &lt;description&gt;The Relativity Infrastructure SDK for interacting with our Infrastructure APIs via .NET&lt;/description&gt;&#xD;&#xA;    &lt;releaseNotes&gt;https://platform.relativity.com&lt;/releaseNotes&gt;&#xD;&#xA;    &lt;copyright&gt;Copyright (c) Relativity&lt;/copyright&gt;&#xD;&#xA;    &lt;dependencies&gt;&#xD;&#xA;      &lt;dependency id=&quot;Relativity.Kepler&quot; version=&quot;2.4.0&quot; /&gt;&#xD;&#xA;      &lt;dependency id=&quot;Relativity.Shared.SDK&quot; version=&quot;1.7.0&quot; /&gt;&#xD;&#xA;    &lt;/dependencies&gt;&#xD;&#xA;  &lt;/metadata&gt;&#xD;&#xA;&lt;/package&gt;</code></pre>
+            </article>
+        </div>
+    </div>
+<script>
+    var packageId = "Relativity.Infrastructure.SDK";
+    var packageIconUrl = "https://www.relativity.com/images/relativity-nuget-logo.png";
+    var packageAuthors = "Relativity ODA LLC";
+    var packageDescription = "The Relativity Infrastructure SDK for interacting with our Infrastructure APIs via .NET";
+
+    var asearch = document.getElementById("asearch");
+    var anav = document.getElementById("anav");
+    if (asearch && anav) {
+        var searchResults = {};
+        var rhtml = null;
+        function showResults(r) {
+            function c(t) { return document.createElement(t); }
+            function getIcon(t) {
+                if (t == "type") return "class";
+                if (t == "method") return "method";
+                if (t == "field") return "field";
+                if (t == "event") return "event";
+                if (t == "property") return "property";
+                return "unknown";
+            }
+            function getColor(t) {
+                if (t == "type") return "c-tr";
+                if (t == "method") return "c-mr";
+                if (t == "event") return "c-er";
+                return "";
+            }
+            if (rhtml) rhtml.remove();
+            rhtml = c("div");
+            var h = c("h4");
+            h.appendChild(document.createTextNode (r.results.length >= 100 ? "100+ Results" : r.results.length + " Results"));
+            var ul = c("ul");
+            ul.className = "long-item-list";
+            rhtml.appendChild(h);
+            rhtml.appendChild(ul);
+            r.results.forEach(function(e) {
+                var li = c("li");
+                var a = c("a");
+                var g = c("span");
+                var sm = c("small");
+                sm.appendChild(document.createTextNode (e.parent));
+                g.className = "fugeticon fugeticon-" + getIcon(e.type);
+                li.appendChild(a);
+                a.className = "link " + getColor(e.type);
+                a.appendChild(g);
+                a.appendChild(document.createTextNode (" " + e.name + " "));
+                a.appendChild(sm);
+                a.href = e.link;
+                ul.appendChild(li);
+            });
+            anav.hidden = true;
+            asearch.parentElement.appendChild (rhtml);
+        }
+        function hideResults() {
+            if (rhtml) rhtml.remove ();
+            anav.hidden = false;
+        }
+        function queryResults(text, k) {
+            var req = new XMLHttpRequest();
+            req.addEventListener("load", function (e) {
+                if (req.readyState == 4) {
+                    var r = JSON.parse(req.responseText);
+                    k(r);
+                }
+            });
+            req.open("GET", "/api/searchpackage?p=Relativity.Infrastructure.SDK&v=4.1.0&q=" + encodeURIComponent(text));
+            req.send();
+        }
+        function doSearch() {
+            var text = (asearch.value+"").trim();
+            if (text.length == 0) {
+                hideResults();
+            }
+            else if (searchResults[text]) {
+                showResults(searchResults[text]);
+            }
+            else {
+                queryResults(text, function(r) {
+                    searchResults[text] = r;
+                    if ((asearch.value+"").trim() == text) {
+                        showResults(r);
+                    }
+                });
+            }
+        }
+        asearch.addEventListener("input", function (e) {
+            doSearch();
+        });
+    }
+</script>
+
+
+        <footer>
+            <hr />
+            <div style="float:right;font-size:80%;background-color:rgb(128,128,128,0.125);padding:1em;border-radius:1em">
+                <h5>Legend</h5>
+                <ul class="pkglist">
+                    <li class="public-api"><span class="fugeticon fugeticon-assembly" aria-hidden="true" title="Assembly"></span>&nbsp;Assembly</li>
+                    <li class="public-api"><span class="fugeticon fugeticon-namespace" aria-hidden="true"></span>&nbsp;Namespace</li>
+                    <li class="public-api"><span class="fugeticon fugeticon-class" aria-hidden="true"></span>&nbsp;Class</li>
+                    <li class="public-api"><span class="fugeticon fugeticon-interface" aria-hidden="true"></span>&nbsp;Interface</li>
+                    <li class="public-api"><span class="fugeticon fugeticon-abstractclass" aria-hidden="true"></span>&nbsp;Abstract Class</li>
+                    <li class="public-api"><span class="fugeticon fugeticon-staticclass" aria-hidden="true"></span>&nbsp;Static Class or Module</li>
+                    <li class="public-api"><span class="fugeticon fugeticon-struct" aria-hidden="true"></span>&nbsp;Struct</li>
+                    <li class="public-api"><span class="fugeticon fugeticon-enum" aria-hidden="true"></span>&nbsp;Enum</li>
+                    <li class="public-api"><span class="fugeticon fugeticon-delegate" aria-hidden="true"></span>&nbsp;Delegate</li>
+                    <li class="private-api"><span class="fugeticon fugeticon-class" aria-hidden="true"></span>&nbsp;Grayed out is non-public</li>
+                </ul>
+            </div>
+            <p><a href="/">fuget.org</a> is &copy; 2021 Frank A. Krueger</p>
+            <p>help me <a href="https://github.com/praeclarum/FuGetGallery">build this on github</a></p>
+            <p><a href="/privacy">privacy policy</a></p>
+            
+        </footer>
+    </div>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+            crossorigin="anonymous"
+            integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+    </script>
+    <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+            crossorigin="anonymous"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+    </script>
+    <script src="/js/site.js?v=5-b_MaPah_HY5Rx8PcTvIFon55WgpdyL0q86icC_qr8"></script>
+
+    
+</body>
+</html>
