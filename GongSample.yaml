@@ -1,0 +1,334 @@
+openapi: 3.0.1
+info:
+  version: '1.0.1'
+  title: httpbin
+  description: An unofficial OpenAPI definition for [httpbin.org](https://httpbin.org).
+ 
+# Specifies the address of your Kubernetes service.  This should always use the Kubernetes internal address notation.
+#
+# The Kong service name is set to the following
+# 1. Root x-kong-name attribute
+# 2. Generated slug from $.info.title
+# 3. Default to openapi as a last resort
+#
+# Kong upstreams and targets are generated from the servers root property (note that servers defined on operation or path objects are ignored).
+# One OpenAPI spec will result in one Kong service and one Kong Upstream, and each individual server in the root servers property will become a target in the Kong Upstream.
+servers:
+  - url: http://service-name.namespace.svc.cluster.local:8000
+    description: Optional server description, e.g. Main (production) server.
+ 
+# Default values added to every Kong Service
+x-kong-service-defaults:
+  retries: 5
+ 
+# Default values added to every Kong Route.  You can add additional values to individual routes as well.
+# Route Defaults Reference: https://docs.konghq.com/gateway-oss/2.5.x/admin-api/#request-body-3
+x-kong-route-defaults:
+  # This is a list of domains your service is available at.  You can add both non-production and production hostnames.  Incoming requests
+  # are matched by these hostnames and your route names.
+  hosts:
+    - dev.api.r1.kcura.com
+    - reg.api.r1.kcura.com
+  preserve_host: true
+  path_handling: v0
+  strip_path: true
+ 
+# The paths section defines individual endpoints (paths) in your API, and the HTTP methods (operations) supported by these endpoints.
+# Detailed info: https://swagger.io/docs/specification/paths-and-operations/
+#
+# Route names in Kong are constructed from the template <APIName>-<PathName>-<Method>
+#
+# APIName: Name taken from the global API object, prefixed to ensure uniqueness across services
+# Method: Route's HTTP Method
+# PathName: Pulled from x-kong-name, operationId, or a path slug
+paths:
+  # Replace service-name with the name of your service for the route path.
+  /service-name/status/{statusCode}:
+    x-kong-name: status-code
+    summary: Returns the specified HTTP status code, or a random status code if more than one are given
+    # This plugin transforms your request from /service-name/status/{statusCode} to /status/{statusCode}
+    # This is used if your application listens for requests at / and does not assume /service-name in the request route
+    x-kong-plugin-request-transformer-advanced:
+      name: request-transformer-advanced
+      enabled: true
+      config:
+        replace:
+          uri: /status/$(uri_captures['statusCode'])
+    parameters:
+      - name: statusCode
+        in: path
+        required: true
+        description: The status code to return, or a weighted list of statuses to pick from, such as `200:4,500:0.3,418`.
+        schema:
+          type: array
+          items:
+            description: HTTP status code. May include optional weight, e.g. `200:0.9`
+            oneOf:
+              - type: string
+              - type: integer
+          minItems: 1
+          example:
+            - "200:5"
+            - "500:0.3"
+            - 418
+        style: simple
+ 
+    get:
+      tags:
+        - Status codes
+      responses:
+        default:
+          description: A response with the requested status code.
+    post:
+      tags:
+        - Status codes
+      responses:
+        default:
+          description: A response with the requested status code.
+    patch:
+      tags:
+        - Status codes
+      responses:
+        default:
+          description: A response with the requested status code.
+    put:
+      tags:
+        - Status codes
+      responses:
+        default:
+          description: A response with the requested status code.
+    delete:
+      tags:
+        - Status codes
+      responses:
+        default:
+          description: A response with the requested status code.
+ 
+# Detailed information about authentication and authorization: https://swagger.io/docs/specification/authentication/
+security:
+  - BasicAuth: []
+ 
+#################################
+# Reusable things
+#################################
+# The global components/schemas section lets you define common data structures used in your API.
+# They can be referenced via $ref whenever a schema is required – in parameters, request bodies, and response bodies.
+components:
+  # The securitySchemes and security keywords are used to describe the authentication methods used in your API.
+  securitySchemes:
+    BasicAuth:
+    type: http
+    scheme: basic
+  schemas:
+    CommonResponse:
+      description: Response returned by `/get`
+      type: object
+      properties:
+        args:
+          type: object
+          additionalProperties:
+            type: string
+          description: Query string parameters specified in the request URL.
+        headers:
+          type: object
+          additionalProperties:
+            type: string
+          description: >
+            Headers (standard or custom) used in the request. Some typical headers are:
+              - Accept
+              - Accept-Encoding
+              - Content-Length
+              - Content-Type
+              - Host
+              - Origin
+              - Referred
+              - User-Agent
+          # not valid syntax
+          #example:
+          #  $ref: '#/components/examples/headers'
+        origin:
+          type: string
+          description: The origin IP from which the request was made.
+          example: '10.100.10.10, 10.100.10.44, 52.91.14.13'
+        url:
+          type: string
+          format: uri
+          description: The endpoint URL to which the request was made.
+          example: https://httpbin.org/post
+      required:
+        - args
+        - headers
+        - origin
+        - url
+ 
+    PostResponse:
+      description: Response returned by /post, /put, /patch and /delete
+      allOf:
+        - $ref: '#/components/schemas/CommonResponse'
+        - type: object
+          properties:
+            data: {}    # Always a plain text string???
+              # ???
+              # oneOf:
+              #   - type: string
+              #   - type: object
+            files: {}
+            #  type: object
+            #  description: ???
+            form:
+              type: object
+              additionalProperties:
+                type: string
+              description: >
+                Form parameters specified in "application/x-www-form-urlencoded" and
+                `multipart/form-data` requests.
+            json:
+              description: >
+                JSON value sent in the payload.
+                Can be object, array, string, number, boolean or `null`.
+              nullable: true
+              # oneOf:
+              #   - type: object
+              #   - type: array
+              #   - type: string
+              #   - type: number
+              #   - type: boolean
+ 
+    TimestampWrapper:
+      type: object
+      properties:
+        timestamp:
+          $ref: '#/components/schemas/Timestamp'
+      required:
+        - timestamp
+ 
+    Timestamp:
+      type: object
+      properties:
+        epoch:
+          type: number
+          format: double
+          example: 1498229228.0671656
+        slang_date:
+          type: string
+          example: today
+        slang_time:
+          type: string
+          example: now
+        iso8601:
+          type: string
+          # format: ???
+          example: '2017-06-23T14:47:08.067166Z'
+        rfc2822:
+          type: string
+          # format: ???
+          example: 'Fri, 23 Jun 2017 14:47:08 GMT'
+        rfc3339:
+          type: string
+          # format: ????
+          example: '2017-06-23T14:47:08.06Z'
+      required:
+        - epoch
+        - slang_date
+        - slang_time
+        - iso8601
+        - rfc2822
+        - rfc3339
+      example:
+        epoch: 1485183550.84644
+        slang_date: Jan 23
+        slang_time: 4 months ago
+        iso8601: '2017-01-23T14:59:10.846440Z'
+        rfc2822: Mon, 23 Jan 2017 14:59:10 GMT
+        rfc3339: '2017-01-23T14:59:10.84Z'
+      # schema does NOT support plural "examples"
+      # examples:
+      #   Now:
+      #     value:
+      #       epoch: 1498229228.0671656
+      #       slang_date: today
+      #       slang_time: now
+      #       iso8601: '2017-06-23T14:47:08.067166Z'
+      #       rfc2822: Fri, 23 Jun 2017 14:47:08 GMT
+      #       rfc3339: '2017-06-23T14:47:08.06Z'
+      #   DateInPast:
+      #     description: Example of a date in the past
+      #     value:
+      #       epoch: 1485183550.84644,
+      #       slang_date": Jan 23
+      #       slang_time": 4 months ago
+      #       iso8601: '2017-01-23T14:59:10.846440Z'
+      #       rfc2822: Mon, 23 Jan 2017 14:59:10 GMT
+      #       rfc3339: '2017-01-23T14:59:10.84Z'
+ 
+ 
+  parameters:
+    freeFormQuery:
+      name: freeform
+      in: query
+      schema:
+        type: object
+        additionalProperties: true
+      # This is the default serialization method, so it can be omitted
+      style: form
+      explode: true
+      description: >
+        Enter free-form query parameters in the JSON format
+        `{ "param1": "value1", "param2": "value2", ... }`.
+        Note that the parameters will be actually sent as
+        `?param1=value1¶m2=value2&...`
+  responses:
+    200BasicAuth:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              authenticated:
+                type: boolean
+                example: true
+              user:
+                type: string
+                description: The user name specified in the request.
+    Image:
+      description: OK
+      content:
+        image/png, image/jpeg, image/webp:
+          schema:
+            type: string
+            format: binary
+        image/svg+xml: {}  # string? object?
+        image/svg: {}  # string? object?
+ 
+    TimestampResponse:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/TimestampWrapper'
+ 
+  examples:
+    headers:
+      value:
+        Accept: '*/*'
+        Connection: close
+        User-Agent: curl/7.37.0
+ 
+    Now:
+      value:
+        epoch: 1498229228.0671656
+        slang_date: today
+        slang_time: now
+        iso8601: '2017-06-23T14:47:08.067166Z'
+        rfc2822: Fri, 23 Jun 2017 14:47:08 GMT
+        rfc3339: '2017-06-23T14:47:08.06Z'
+    DateInPast:
+      description: Example of a date in the past
+      value:
+        epoch: 1485183550.84644,
+        slang_date": Jan 23
+        slang_time": 4 months ago
+        iso8601: '2017-01-23T14:59:10.846440Z'
+        rfc2822: Mon, 23 Jan 2017 14:59:10 GMT
+        rfc3339: '2017-01-23T14:59:10.84Z'
