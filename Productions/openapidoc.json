@@ -1,0 +1,2030 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Relativity.Productions",
+    "description": "Relativity.Productions"
+  },
+  "servers": [
+    {
+      "url": "/Relativity.REST/api",
+      "description": "The URL prefix for all Kepler services"
+    }
+  ],
+  "paths": {
+    "/Relativity.Productions.Services.IProductionModule/Production Data Source Manager/GetKeplerStatusAsync": {
+      "get": {
+        "tags": [
+          "Production Module"
+        ],
+        "description": "Ping Endpoint",
+        "operationId": "Relativity.Productions.Services.IProductionDataSourceManager.GetKeplerStatusAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Data Source Manager/ReadSingleAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionDataSourceManager",
+        "operationId": "Relativity.Productions.Services.IProductionDataSourceManager.ReadSingleAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReadSingleAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "No description set"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Data Source Manager/DeleteSingleAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionDataSourceManager",
+        "operationId": "Relativity.Productions.Services.IProductionDataSourceManager.DeleteSingleAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteSingleAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Data Source Manager/CreateSingleAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionDataSourceManager",
+        "operationId": "Relativity.Productions.Services.IProductionDataSourceManager.CreateSingleAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSingleAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "No description set"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Data Source Manager/UpdateSingleAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionDataSourceManager",
+        "operationId": "Relativity.Productions.Services.IProductionDataSourceManager.UpdateSingleAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSingleAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Manager/GetKeplerStatusAsync": {
+      "get": {
+        "tags": [
+          "Production Module"
+        ],
+        "description": "Ping Endpoint",
+        "operationId": "Relativity.Productions.Services.IProductionManager.GetKeplerStatusAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Manager/ReadSingleAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionManager",
+        "operationId": "Relativity.Productions.Services.IProductionManager.ReadSingleAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReadSingleAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "No description set"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Manager/CancelJobAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionManager",
+        "operationId": "Relativity.Productions.Services.IProductionManager.CancelJobAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CancelJobAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "No description set"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Manager/MassCancelAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionManager",
+        "operationId": "Relativity.Productions.Services.IProductionManager.MassCancelAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MassCancelAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "No description set"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Manager/CreateSingleAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionManager",
+        "operationId": "Relativity.Productions.Services.IProductionManager.CreateSingleAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSingleAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "No description set"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Manager/UpdateSingleAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionManager",
+        "operationId": "Relativity.Productions.Services.IProductionManager.UpdateSingleAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSingleAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Manager/DeleteSingleAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionManager",
+        "operationId": "Relativity.Productions.Services.IProductionManager.DeleteSingleAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteSingleAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Manager/StageProductionAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionManager",
+        "operationId": "Relativity.Productions.Services.IProductionManager.StageProductionAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StageProductionAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "No description set"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Manager/RunProductionAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionManager",
+        "operationId": "Relativity.Productions.Services.IProductionManager.RunProductionAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RunProductionAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "No description set"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Manager/RerunProductionAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionManager",
+        "operationId": "Relativity.Productions.Services.IProductionManager.RerunProductionAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RerunProductionAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Manager/MassRetryAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionManager",
+        "operationId": "Relativity.Productions.Services.IProductionManager.MassRetryAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MassRetryAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "No description set"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Manager/MassStageAndRunProductionsAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionManager",
+        "operationId": "Relativity.Productions.Services.IProductionManager.MassStageAndRunProductionsAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MassStageAndRunProductionsAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "No description set"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Manager/GetAllAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionManager",
+        "operationId": "Relativity.Productions.Services.IProductionManager.GetAllAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAllAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "No description set"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Manager/GetJobStatus": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionManager",
+        "operationId": "Relativity.Productions.Services.IProductionManager.GetJobStatus",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetJobStatus"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "No description set"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Manager/GetProductionStatusDetails": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionManager",
+        "operationId": "Relativity.Productions.Services.IProductionManager.GetProductionStatusDetails",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetProductionStatusDetails"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "No description set"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Manager/GetProducedProductionsFromDocumentsAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionManager",
+        "operationId": "Relativity.Productions.Services.IProductionManager.GetProducedProductionsFromDocumentsAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetProducedProductionsFromDocumentsAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "No description set"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Manager/GetProductionsEligibleForReproductionAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionManager",
+        "operationId": "Relativity.Productions.Services.IProductionManager.GetProductionsEligibleForReproductionAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetProductionsEligibleForReproductionAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "No description set"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Manager/GetProductionImagesAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionManager",
+        "operationId": "Relativity.Productions.Services.IProductionManager.GetProductionImagesAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetProductionImagesAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "No description set"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Manager/SetProductionRestrictionsAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionManager",
+        "operationId": "Relativity.Productions.Services.IProductionManager.SetProductionRestrictionsAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetProductionRestrictionsAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Manager/GetProductionRestrictionAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionManager",
+        "operationId": "Relativity.Productions.Services.IProductionManager.GetProductionRestrictionAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetProductionRestrictionAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "No description set"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Placeholder Manager/GetKeplerStatusAsync": {
+      "get": {
+        "tags": [
+          "Production Module"
+        ],
+        "description": "Ping Endpoint",
+        "operationId": "Relativity.Productions.Services.IProductionPlaceholderManager.GetKeplerStatusAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Placeholder Manager/ReadSingleAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionPlaceholderManager",
+        "operationId": "Relativity.Productions.Services.IProductionPlaceholderManager.ReadSingleAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReadSingleAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "No description set"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Placeholder Manager/DeleteSingleAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionPlaceholderManager",
+        "operationId": "Relativity.Productions.Services.IProductionPlaceholderManager.DeleteSingleAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteSingleAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Placeholder Manager/CreateSingleAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionPlaceholderManager",
+        "operationId": "Relativity.Productions.Services.IProductionPlaceholderManager.CreateSingleAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSingleAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "No description set"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Production Placeholder Manager/UpdateSingleAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IProductionPlaceholderManager",
+        "operationId": "Relativity.Productions.Services.IProductionPlaceholderManager.UpdateSingleAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSingleAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Reproduction Job Manager/GetKeplerStatusAsync": {
+      "get": {
+        "tags": [
+          "Production Module"
+        ],
+        "description": "Ping Endpoint",
+        "operationId": "Relativity.Productions.Services.IReproductionJobManager.GetKeplerStatusAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Reproduction Job Manager/CreateReproductionJobAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IReproductionJobManager",
+        "operationId": "Relativity.Productions.Services.IReproductionJobManager.CreateReproductionJobAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateReproductionJobAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "No description set"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Reproduction Job Manager/GetReproductionStatusByReproductionJobIDAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IReproductionJobManager",
+        "operationId": "Relativity.Productions.Services.IReproductionJobManager.GetReproductionStatusByReproductionJobIDAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetReproductionStatusByReproductionJobIDAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "No description set"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.IProductionModule/Reproduction Job Manager/GetReproductionJobIDsAsync": {
+      "post": {
+        "tags": [
+          "Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IReproductionJobManager",
+        "operationId": "Relativity.Productions.Services.IReproductionJobManager.GetReproductionJobIDsAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetReproductionJobIDsAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "No description set"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.Private.IInternalProductionModule/Production Manager Private/GetKeplerStatusAsync": {
+      "get": {
+        "tags": [
+          "Internal Production Module"
+        ],
+        "description": "Ping Endpoint",
+        "operationId": "Relativity.Productions.Services.Private.IInternalProductionManager.GetKeplerStatusAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.Private.IInternalProductionModule/Production Manager Private/GetProducedProductionsWithImages": {
+      "post": {
+        "tags": [
+          "Internal Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IInternalProductionManager",
+        "operationId": "Relativity.Productions.Services.Private.IInternalProductionManager.GetProducedProductionsWithImages",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetProducedProductionsWithImages"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "No description set"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.Private.IInternalProductionModule/Production Manager Private/GetCountOfMassOperationItems": {
+      "post": {
+        "tags": [
+          "Internal Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IInternalProductionManager",
+        "operationId": "Relativity.Productions.Services.Private.IInternalProductionManager.GetCountOfMassOperationItems",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetCountOfMassOperationItems"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "No description set"
+          }
+        }
+      }
+    },
+    "/Relativity.Productions.Services.Private.IInternalProductionModule/Production Manager Private/GetProductionStartupInformationAsync": {
+      "get": {
+        "tags": [
+          "Internal Production Module"
+        ],
+        "summary": "",
+        "description": "[Private] IInternalProductionManager",
+        "operationId": "Relativity.Productions.Services.Private.IInternalProductionManager.GetProductionStartupInformationAsync",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-CSRF-Header"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetProductionStartupInformationAsync"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "No description set"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ReadSingleAsync": {
+        "title": "ReadSingleAsync",
+        "required": [
+          "workspaceArtifactID",
+          "dataSourceArtifactID",
+          "withPlaceholderImage"
+        ],
+        "properties": {
+          "workspaceArtifactID": {
+            "type": "integer",
+            "format": "integer"
+          },
+          "dataSourceArtifactID": {
+            "type": "integer",
+            "format": "integer"
+          },
+          "withPlaceholderImage": {
+            "type": "",
+            "format": ""
+          }
+        },
+        "description": ""
+      },
+      "DeleteSingleAsync": {
+        "title": "DeleteSingleAsync",
+        "required": [
+          "workspaceArtifactID",
+          "dataSourceArtifactID"
+        ],
+        "properties": {
+          "workspaceArtifactID": {
+            "type": "integer",
+            "format": "integer"
+          },
+          "dataSourceArtifactID": {
+            "type": "integer",
+            "format": "integer"
+          }
+        },
+        "description": ""
+      },
+      "CreateSingleAsync": {
+        "title": "CreateSingleAsync",
+        "required": [
+          "workspaceArtifactID",
+          "productionID",
+          "dataSource"
+        ],
+        "properties": {
+          "workspaceArtifactID": {
+            "type": "integer",
+            "format": "integer"
+          },
+          "productionID": {
+            "type": "integer",
+            "format": "integer"
+          },
+          "dataSource": {
+            "title": "ProductionDataSource",
+            "required": [
+              "ArtifactTypeID",
+              "ProductionType",
+              "SavedSearch",
+              "UseImagePlaceholder",
+              "Placeholder",
+              "MarkupSet",
+              "BurnRedactions",
+              "PlaceholderFileData",
+              "PlaceholderFilename",
+              "PlaceholderFileSize",
+              "PlaceholderFileID",
+              "ArtifactID",
+              "Name"
+            ],
+            "type": "object",
+            "properties": {
+              "ArtifactTypeID": {
+                "type": "integer",
+                "description": "",
+                "format": "System.Int32"
+              },
+              "ProductionType": {
+                "type": "object"
+              },
+              "SavedSearch": {
+                "type": "relativity.services.search.savedsearchref",
+                "description": "",
+                "format": "Relativity.Services.Search.SavedSearchRef"
+              },
+              "UseImagePlaceholder": {
+                "type": "object"
+              },
+              "Placeholder": {
+                "required": [
+                  "ArtifactID",
+                  "Name"
+                ],
+                "type": "object",
+                "properties": {
+                  "ArtifactID": {
+                    "type": "integer",
+                    "description": "",
+                    "format": "System.Int32"
+                  },
+                  "Name": {
+                    "type": "string",
+                    "description": "",
+                    "format": "System.String"
+                  }
+                }
+              },
+              "MarkupSet": {
+                "required": [
+                  "ArtifactID",
+                  "Name"
+                ],
+                "type": "object",
+                "properties": {
+                  "ArtifactID": {
+                    "type": "integer",
+                    "description": "",
+                    "format": "System.Int32"
+                  },
+                  "Name": {
+                    "type": "string",
+                    "description": "",
+                    "format": "System.String"
+                  }
+                }
+              },
+              "BurnRedactions": {
+                "type": "boolean",
+                "description": "",
+                "format": "System.Boolean"
+              },
+              "PlaceholderFileData": {
+                "type": "array",
+                "items": {
+                  "type": "byte",
+                  "format": "System.Byte"
+                },
+                "description": ""
+              },
+              "PlaceholderFilename": {
+                "type": "string",
+                "description": "",
+                "format": "System.String"
+              },
+              "PlaceholderFileSize": {
+                "type": "integer",
+                "description": "",
+                "format": "System.Int32"
+              },
+              "PlaceholderFileID": {
+                "type": "nullable`1[[system.int32, mscorlib, version=4.0.0.0, culture=neutral, publickeytoken=b77a5c561934e089]]",
+                "description": "",
+                "format": "System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"
+              },
+              "ArtifactID": {
+                "type": "integer",
+                "description": "",
+                "format": "System.Int32"
+              },
+              "Name": {
+                "type": "string",
+                "description": "",
+                "format": "System.String"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "description": ""
+      },
+      "UpdateSingleAsync": {
+        "title": "UpdateSingleAsync",
+        "required": [
+          "workspaceArtifactID",
+          "productionID",
+          "dataSource"
+        ],
+        "properties": {
+          "workspaceArtifactID": {
+            "type": "integer",
+            "format": "integer"
+          },
+          "productionID": {
+            "type": "integer",
+            "format": "integer"
+          },
+          "dataSource": {
+            "title": "ProductionDataSource",
+            "required": [
+              "ArtifactTypeID",
+              "ProductionType",
+              "SavedSearch",
+              "UseImagePlaceholder",
+              "Placeholder",
+              "MarkupSet",
+              "BurnRedactions",
+              "PlaceholderFileData",
+              "PlaceholderFilename",
+              "PlaceholderFileSize",
+              "PlaceholderFileID",
+              "ArtifactID",
+              "Name"
+            ],
+            "type": "object",
+            "properties": {
+              "ArtifactTypeID": {
+                "type": "integer",
+                "description": "",
+                "format": "System.Int32"
+              },
+              "ProductionType": {
+                "type": "object"
+              },
+              "SavedSearch": {
+                "type": "relativity.services.search.savedsearchref",
+                "description": "",
+                "format": "Relativity.Services.Search.SavedSearchRef"
+              },
+              "UseImagePlaceholder": {
+                "type": "object"
+              },
+              "Placeholder": {
+                "required": [
+                  "ArtifactID",
+                  "Name"
+                ],
+                "type": "object",
+                "properties": {
+                  "ArtifactID": {
+                    "type": "integer",
+                    "description": "",
+                    "format": "System.Int32"
+                  },
+                  "Name": {
+                    "type": "string",
+                    "description": "",
+                    "format": "System.String"
+                  }
+                }
+              },
+              "MarkupSet": {
+                "required": [
+                  "ArtifactID",
+                  "Name"
+                ],
+                "type": "object",
+                "properties": {
+                  "ArtifactID": {
+                    "type": "integer",
+                    "description": "",
+                    "format": "System.Int32"
+                  },
+                  "Name": {
+                    "type": "string",
+                    "description": "",
+                    "format": "System.String"
+                  }
+                }
+              },
+              "BurnRedactions": {
+                "type": "boolean",
+                "description": "",
+                "format": "System.Boolean"
+              },
+              "PlaceholderFileData": {
+                "type": "array",
+                "items": {
+                  "type": "byte",
+                  "format": "System.Byte"
+                },
+                "description": ""
+              },
+              "PlaceholderFilename": {
+                "type": "string",
+                "description": "",
+                "format": "System.String"
+              },
+              "PlaceholderFileSize": {
+                "type": "integer",
+                "description": "",
+                "format": "System.Int32"
+              },
+              "PlaceholderFileID": {
+                "type": "nullable`1[[system.int32, mscorlib, version=4.0.0.0, culture=neutral, publickeytoken=b77a5c561934e089]]",
+                "description": "",
+                "format": "System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"
+              },
+              "ArtifactID": {
+                "type": "integer",
+                "description": "",
+                "format": "System.Int32"
+              },
+              "Name": {
+                "type": "string",
+                "description": "",
+                "format": "System.String"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "description": ""
+      },
+      "CancelJobAsync": {
+        "title": "CancelJobAsync",
+        "required": [
+          "jobRef"
+        ],
+        "properties": {
+          "jobRef": {
+            "title": "ProductionJobRef",
+            "required": [
+              "WorkspaceID",
+              "ProductionID",
+              "JobID"
+            ],
+            "type": "object",
+            "properties": {
+              "WorkspaceID": {
+                "type": "integer",
+                "description": "",
+                "format": "System.Int32"
+              },
+              "ProductionID": {
+                "type": "integer",
+                "description": "",
+                "format": "System.Int32"
+              },
+              "JobID": {
+                "type": "integer",
+                "description": "",
+                "format": "System.Int32"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "description": ""
+      },
+      "MassCancelAsync": {
+        "title": "MassCancelAsync",
+        "required": [
+          "jobsToBeCanceled"
+        ],
+        "properties": {
+          "jobsToBeCanceled": {
+            "type": "array",
+            "items": { }
+          }
+        },
+        "description": ""
+      },
+      "StageProductionAsync": {
+        "title": "StageProductionAsync",
+        "required": [
+          "workspaceArtifactID",
+          "productionArtifactID"
+        ],
+        "properties": {
+          "workspaceArtifactID": {
+            "type": "integer",
+            "format": "integer"
+          },
+          "productionArtifactID": {
+            "type": "integer",
+            "format": "integer"
+          }
+        },
+        "description": ""
+      },
+      "RunProductionAsync": {
+        "title": "RunProductionAsync",
+        "required": [
+          "workspaceArtifactID",
+          "productionArtifactID",
+          "suppressWarnings",
+          "overrideConflicts"
+        ],
+        "properties": {
+          "workspaceArtifactID": {
+            "type": "integer",
+            "format": "integer"
+          },
+          "productionArtifactID": {
+            "type": "integer",
+            "format": "integer"
+          },
+          "suppressWarnings": {
+            "type": "",
+            "format": ""
+          },
+          "overrideConflicts": {
+            "type": "",
+            "format": ""
+          }
+        },
+        "description": ""
+      },
+      "RerunProductionAsync": {
+        "title": "RerunProductionAsync",
+        "required": [
+          "workspaceArtifactID",
+          "productionArtifactID"
+        ],
+        "properties": {
+          "workspaceArtifactID": {
+            "type": "integer",
+            "format": "integer"
+          },
+          "productionArtifactID": {
+            "type": "integer",
+            "format": "integer"
+          }
+        },
+        "description": ""
+      },
+      "MassRetryAsync": {
+        "title": "MassRetryAsync",
+        "required": [
+          "jobsToBeRetried"
+        ],
+        "properties": {
+          "jobsToBeRetried": {
+            "type": "array",
+            "items": { }
+          }
+        },
+        "description": ""
+      },
+      "MassStageAndRunProductionsAsync": {
+        "title": "MassStageAndRunProductionsAsync",
+        "required": [
+          "workspaceID",
+          "productionIDs"
+        ],
+        "properties": {
+          "workspaceID": {
+            "type": "integer",
+            "format": "integer"
+          },
+          "productionIDs": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "System.Int32"
+            }
+          }
+        },
+        "description": ""
+      },
+      "GetAllAsync": {
+        "title": "GetAllAsync",
+        "required": [
+          "workspaceArtifactID",
+          "mode"
+        ],
+        "properties": {
+          "workspaceArtifactID": {
+            "type": "integer",
+            "format": "integer"
+          },
+          "mode": {
+            "title": "DataSourceReadMode",
+            "type": "object",
+            "additionalProperties": false
+          }
+        },
+        "description": ""
+      },
+      "GetJobStatus": {
+        "title": "GetJobStatus",
+        "required": [
+          "workspaceArtifactID",
+          "productionArtifactID",
+          "includePercentages",
+          "numberOfBrandingErrors"
+        ],
+        "properties": {
+          "workspaceArtifactID": {
+            "type": "integer",
+            "format": "integer"
+          },
+          "productionArtifactID": {
+            "type": "integer",
+            "format": "integer"
+          },
+          "includePercentages": {
+            "type": "",
+            "format": ""
+          },
+          "numberOfBrandingErrors": {
+            "type": "integer",
+            "format": "integer"
+          }
+        },
+        "description": ""
+      },
+      "GetProductionStatusDetails": {
+        "title": "GetProductionStatusDetails",
+        "required": [
+          "workspaceArtifactId",
+          "productionArtifactId"
+        ],
+        "properties": {
+          "workspaceArtifactId": {
+            "type": "integer",
+            "format": "integer"
+          },
+          "productionArtifactId": {
+            "type": "integer",
+            "format": "integer"
+          }
+        },
+        "description": ""
+      },
+      "GetProducedProductionsFromDocumentsAsync": {
+        "title": "GetProducedProductionsFromDocumentsAsync",
+        "required": [
+          "workspaceArtifactID",
+          "documentIDs"
+        ],
+        "properties": {
+          "workspaceArtifactID": {
+            "type": "integer",
+            "format": "integer"
+          },
+          "documentIDs": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "System.Int32"
+            }
+          }
+        },
+        "description": ""
+      },
+      "GetProductionsEligibleForReproductionAsync": {
+        "title": "GetProductionsEligibleForReproductionAsync",
+        "required": [
+          "workspaceArtifactID",
+          "databaseToken",
+          "reproductionType"
+        ],
+        "properties": {
+          "workspaceArtifactID": {
+            "type": "integer",
+            "format": "integer"
+          },
+          "databaseToken": {
+            "type": "string",
+            "format": "string"
+          },
+          "reproductionType": {
+            "title": "ReproductionType",
+            "type": "object",
+            "additionalProperties": false
+          }
+        },
+        "description": ""
+      },
+      "GetProductionImagesAsync": {
+        "title": "GetProductionImagesAsync",
+        "required": [
+          "workspaceArtifactID",
+          "productionArtifactID",
+          "documents"
+        ],
+        "properties": {
+          "workspaceArtifactID": {
+            "type": "integer",
+            "format": "integer"
+          },
+          "productionArtifactID": {
+            "type": "integer",
+            "format": "integer"
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "System.Int32"
+            }
+          }
+        },
+        "description": ""
+      },
+      "SetProductionRestrictionsAsync": {
+        "title": "SetProductionRestrictionsAsync",
+        "required": [
+          "workspaceArtifactID",
+          "productionRestrictionSearchID"
+        ],
+        "properties": {
+          "workspaceArtifactID": {
+            "type": "integer",
+            "format": "integer"
+          },
+          "productionRestrictionSearchID": {
+            "type": "integer",
+            "format": "integer"
+          }
+        },
+        "description": ""
+      },
+      "GetProductionRestrictionAsync": {
+        "title": "GetProductionRestrictionAsync",
+        "required": [
+          "workspaceArtifactID"
+        ],
+        "properties": {
+          "workspaceArtifactID": {
+            "type": "integer",
+            "format": "integer"
+          }
+        },
+        "description": ""
+      },
+      "CreateReproductionJobAsync": {
+        "title": "CreateReproductionJobAsync",
+        "required": [
+          "workspaceArtifactID",
+          "reproductionOptions",
+          "productions",
+          "documents"
+        ],
+        "properties": {
+          "workspaceArtifactID": {
+            "type": "integer",
+            "format": "integer"
+          },
+          "reproductionOptions": {
+            "title": "ReproductionOptions",
+            "required": [
+              "ReproductionType",
+              "ReproduceDocumentOptions",
+              "ReplaceDocumentWithPlaceholderOptions",
+              "ReplacePlaceholderWithDocumentOptions"
+            ],
+            "type": "object",
+            "properties": {
+              "ReproductionType": {
+                "type": "object"
+              },
+              "ReproduceDocumentOptions": {
+                "required": [
+                  "NativeReproductionOption",
+                  "BurnRedactions",
+                  "MarkupSet"
+                ],
+                "type": "object",
+                "properties": {
+                  "NativeReproductionOption": {
+                    "type": "object"
+                  },
+                  "BurnRedactions": {
+                    "type": "boolean",
+                    "description": "",
+                    "format": "System.Boolean"
+                  },
+                  "MarkupSet": {
+                    "required": [
+                      "ArtifactID",
+                      "Name"
+                    ],
+                    "type": "object",
+                    "properties": {
+                      "ArtifactID": {
+                        "type": "integer",
+                        "description": "",
+                        "format": "System.Int32"
+                      },
+                      "Name": {
+                        "type": "string",
+                        "description": "",
+                        "format": "System.String"
+                      }
+                    }
+                  }
+                }
+              },
+              "ReplaceDocumentWithPlaceholderOptions": {
+                "required": [
+                  "Placeholder",
+                  "NativeReproductionOption"
+                ],
+                "type": "object",
+                "properties": {
+                  "Placeholder": {
+                    "required": [
+                      "ArtifactID",
+                      "Name"
+                    ],
+                    "type": "object",
+                    "properties": {
+                      "ArtifactID": {
+                        "type": "integer",
+                        "description": "",
+                        "format": "System.Int32"
+                      },
+                      "Name": {
+                        "type": "string",
+                        "description": "",
+                        "format": "System.String"
+                      }
+                    }
+                  },
+                  "NativeReproductionOption": {
+                    "type": "object"
+                  }
+                }
+              },
+              "ReplacePlaceholderWithDocumentOptions": {
+                "required": [
+                  "Delimiter",
+                  "NumberOfDigits",
+                  "Suffix",
+                  "NativeReproductionOption",
+                  "BurnRedactions",
+                  "MarkupSet"
+                ],
+                "type": "object",
+                "properties": {
+                  "Delimiter": {
+                    "type": "string",
+                    "description": "",
+                    "format": "System.String"
+                  },
+                  "NumberOfDigits": {
+                    "type": "integer",
+                    "description": "",
+                    "format": "System.Int32"
+                  },
+                  "Suffix": {
+                    "type": "string",
+                    "description": "",
+                    "format": "System.String"
+                  },
+                  "NativeReproductionOption": {
+                    "type": "object"
+                  },
+                  "BurnRedactions": {
+                    "type": "boolean",
+                    "description": "",
+                    "format": "System.Boolean"
+                  },
+                  "MarkupSet": {
+                    "required": [
+                      "ArtifactID",
+                      "Name"
+                    ],
+                    "type": "object",
+                    "properties": {
+                      "ArtifactID": {
+                        "type": "integer",
+                        "description": "",
+                        "format": "System.Int32"
+                      },
+                      "Name": {
+                        "type": "string",
+                        "description": "",
+                        "format": "System.String"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "additionalProperties": false
+          },
+          "productions": {
+            "type": "array",
+            "items": { }
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "System.Int32"
+            }
+          }
+        },
+        "description": ""
+      },
+      "GetReproductionStatusByReproductionJobIDAsync": {
+        "title": "GetReproductionStatusByReproductionJobIDAsync",
+        "required": [
+          "workspaceArtifactID",
+          "reproductionJobID"
+        ],
+        "properties": {
+          "workspaceArtifactID": {
+            "type": "integer",
+            "format": "integer"
+          },
+          "reproductionJobID": {
+            "type": "integer",
+            "format": "integer"
+          }
+        },
+        "description": ""
+      },
+      "GetReproductionJobIDsAsync": {
+        "title": "GetReproductionJobIDsAsync",
+        "required": [
+          "workspaceArtifactID"
+        ],
+        "properties": {
+          "workspaceArtifactID": {
+            "type": "integer",
+            "format": "integer"
+          }
+        },
+        "description": ""
+      },
+      "GetProducedProductionsWithImages": {
+        "title": "GetProducedProductionsWithImages",
+        "required": [
+          "workspaceId",
+          "documentId"
+        ],
+        "properties": {
+          "workspaceId": {
+            "type": "integer",
+            "format": "integer"
+          },
+          "documentId": {
+            "type": "integer",
+            "format": "integer"
+          }
+        },
+        "description": ""
+      },
+      "GetCountOfMassOperationItems": {
+        "title": "GetCountOfMassOperationItems",
+        "required": [
+          "workspaceId",
+          "databaseToken"
+        ],
+        "properties": {
+          "workspaceId": {
+            "type": "integer",
+            "format": "integer"
+          },
+          "databaseToken": {
+            "type": "",
+            "format": ""
+          }
+        },
+        "description": ""
+      },
+      "GetProductionStartupInformationAsync": {
+        "title": "GetProductionStartupInformationAsync",
+        "description": ""
+      }
+    },
+    "parameters": {
+      "X-CSRF-Header": {
+        "name": "X-CSRF-Header",
+        "in": "header",
+        "description": "Required CSRF header for any KeplerService. *Note: Actual string value does not matter*. ",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "format": "System.String",
+          "default": "."
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Relativity.Productions.Services.IProductionDataSourceManager",
+      "description": ""
+    },
+    {
+      "name": "Relativity.Productions.Services.IProductionManager",
+      "description": ""
+    },
+    {
+      "name": "Relativity.Productions.Services.IProductionPlaceholderManager",
+      "description": ""
+    },
+    {
+      "name": "Relativity.Productions.Services.IReproductionJobManager",
+      "description": ""
+    },
+    {
+      "name": "Relativity.Productions.Services.Private.IInternalProductionManager",
+      "description": ""
+    }
+  ]
+}

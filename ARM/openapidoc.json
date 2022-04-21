@@ -1,0 +1,2184 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Relativity.ARM.Services",
+        "description": "Relativity.ARM.Services",
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "/Relativity.REST/api",
+            "description": "The URL prefix for all Kepler services"
+        }
+    ],
+	"paths": {
+		"/relativity-arm/V1/archive-jobs/": {
+			"post": {
+				"tags": [
+					"ARM Module"
+				],
+				"summary": "",
+				"description": "[Public] ARM Archive Manager",
+				"operationId": "Relativity.ARM.Services.Interfaces.IArmArchiveJobManager.CreateAsync",
+				"parameters": [
+					{
+						"$ref": "#/components/parameters/X-CSRF-Header"
+					}
+				],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ArchiveJobRequest"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "Successful operation",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/parameters/jobID"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "Bad Request. Validation exception."
+					}
+				}
+			}
+		},
+		"/relativity-arm/V1/archive-jobs/{jobID}": {
+			"put": {
+				"tags": [
+					"ARM Module"
+				],
+				"summary": "",
+				"description": "[Public] ARM Archive Manager",
+				"operationId": "Relativity.ARM.Services.Interfaces.IArmArchiveJobManager.CreateAsync",
+				"parameters": [
+					{
+						"$ref": "#/components/parameters/X-CSRF-Header"
+					},
+					{
+						"$ref": "#/components/parameters/jobID"
+					}
+				],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ArchiveJobRequest"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "Successful operation"
+					}
+				}
+			},
+			"get": {
+				"tags": [
+					"ARM Module"
+				],
+				"summary": "",
+				"description": "[Public] ARM Archive Manager",
+				"operationId": "Relativity.ARM.Services.Interfaces.IArmArchiveJobManager.ReadAsync",
+				"parameters": [
+					{
+						"$ref": "#/components/parameters/X-CSRF-Header"
+					},
+					{
+						"$ref": "#/components/parameters/jobID"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful operation",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ArchiveJobResponse"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "Bad Request. Job Not Found."
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"ARM Module"
+				],
+				"summary": "",
+				"description": "[Public] ARM Archive Manager",
+				"operationId": "Relativity.ARM.Services.Interfaces.IArmArchiveJobManager.DeleteAsync",
+				"parameters": [
+					{
+						"$ref": "#/components/parameters/X-CSRF-Header"
+					},
+					{
+						"$ref": "#/components/parameters/jobID"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful operation"
+					},
+					"400": {
+						"description": "Bad Request. Job Not Found."
+					}
+				}
+			}
+		},
+		"/relativity-arm/V1/move-jobs/": {
+			"post": {
+				"tags": [
+					"ARM Module"
+				],
+				"summary": "",
+				"description": "[Public] ARM Move Manager",
+				"operationId": "Relativity.ARM.Services.Interfaces.IArmMoveJobManager.CreateAsync",
+				"parameters": [
+					{
+						"$ref": "#/components/parameters/X-CSRF-Header"
+					}
+				],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/MoveJobRequest"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "Successful operation",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/parameters/jobID"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "Bad Request. Validation exception."
+					}
+				}
+			}
+		},
+		"/relativity-arm/V1/move-jobs/{jobID}": {
+			"put": {
+				"tags": [
+					"ARM Module"
+				],
+				"summary": "",
+				"description": "[Public] ARM Move Manager",
+				"operationId": "Relativity.ARM.Services.Interfaces.IArmMoveJobManager.CreateAsync",
+				"parameters": [
+					{
+						"$ref": "#/components/parameters/X-CSRF-Header"
+					},
+					{
+						"$ref": "#/components/parameters/jobID"
+					}
+				],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/MoveJobRequest"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "Successful operation"
+					},
+					"400": {
+						"description": "Bad Request. Validation exception."
+					}
+				}
+			},
+			"get": {
+				"tags": [
+					"ARM Module"
+				],
+				"summary": "",
+				"description": "[Public] ARM Move Manager",
+				"operationId": "Relativity.ARM.Services.Interfaces.IArmMoveJobManager.ReadAsync",
+				"parameters": [
+					{
+						"$ref": "#/components/parameters/X-CSRF-Header"
+					},
+					{
+						"$ref": "#/components/parameters/jobID"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful operation",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/MoveJobResponse"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "Bad Request. Job Not Found."
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"ARM Module"
+				],
+				"summary": "",
+				"description": "[Public] ARM Move Manager",
+				"operationId": "Relativity.ARM.Services.Interfaces.IArmMoveJobManager.DeleteAsync",
+				"parameters": [
+					{
+						"$ref": "#/components/parameters/X-CSRF-Header"
+					},
+					{
+						"$ref": "#/components/parameters/jobID"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful operation"
+					},
+					"400": {
+						"description": "Bad Request. Job Not Found."
+					}
+				}
+			}
+		},
+		"/relativity-arm/V1/restore-jobs/": {
+			"post": {
+				"tags": [
+					"ARM Module"
+				],
+				"summary": "",
+				"description": "[Public] ARM Restore Manager",
+				"operationId": "Relativity.ARM.Services.Interfaces.IArmRestoreJobManager.CreateAsync",
+				"parameters": [
+					{
+						"$ref": "#/components/parameters/X-CSRF-Header"
+					}
+				],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/RestoreJobRequest"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "Successful operation",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/parameters/jobID"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "Bad Request. Validation exception."
+					}
+				}
+			}
+		},
+		"/relativity-arm/V1/restore-jobs/{jobID}": {
+			"put": {
+				"tags": [
+					"ARM Module"
+				],
+				"summary": "",
+				"description": "[Public] ARM Restore Manager",
+				"operationId": "Relativity.ARM.Services.Interfaces.IArmRestoreJobManager.CreateAsync",
+				"parameters": [
+					{
+						"$ref": "#/components/parameters/X-CSRF-Header"
+					},
+					{
+						"$ref": "#/components/parameters/jobID"
+					}
+				],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/RestoreJobRequest"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "Successful operation"
+					},
+					"400": {
+						"description": "Bad Request. Validation exception."
+					}
+				}
+			},
+			"get": {
+				"tags": [
+					"ARM Module"
+				],
+				"summary": "",
+				"description": "[Public] ARM Restore Manager",
+				"operationId": "Relativity.ARM.Services.Interfaces.IArmRestoreJobManager.ReadAsync",
+				"parameters": [
+					{
+						"$ref": "#/components/parameters/X-CSRF-Header"
+					},
+					{
+						"$ref": "#/components/parameters/jobID"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful operation",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/RestoreJobResponse"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "Bad Request. Job Not Found."
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"ARM Module"
+				],
+				"summary": "",
+				"description": "[Public] ARM Restore Manager",
+				"operationId": "Relativity.ARM.Services.Interfaces.IArmRestoreJobManager.DeleteAsync",
+				"parameters": [
+					{
+						"$ref": "#/components/parameters/X-CSRF-Header"
+					},
+					{
+						"$ref": "#/components/parameters/jobID"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful operation"
+					},
+					"400": {
+						"description": "Bad Request. Job Not Found."
+					}
+				}
+			}
+		},
+		"/relativity-arm/V1/database-restore-jobs/": {
+			"post": {
+				"tags": [
+					"ARM Module"
+				],
+				"summary": "",
+				"description": "[Public] ARM Database Restore Manager",
+				"operationId": "Relativity.ARM.Services.Interfaces.IArmDatabaseRestoreJobManager.CreateAsync",
+				"parameters": [
+					{
+						"$ref": "#/components/parameters/X-CSRF-Header"
+					}
+				],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/DatabaseRestoreJobRequest"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "Successful operation",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/parameters/jobID"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "Bad Request. Validation exception."
+					}
+				}
+			}
+		},
+		"/relativity-arm/V1/database-restore-jobs/{jobID}": {
+			"put": {
+				"tags": [
+					"ARM Module"
+				],
+				"summary": "",
+				"description": "[Public] ARM Database Restore Manager",
+				"operationId": "Relativity.ARM.Services.Interfaces.IArmDatabaseRestoreJobManager.CreateAsync",
+				"parameters": [
+					{
+						"$ref": "#/components/parameters/X-CSRF-Header"
+					},
+					{
+						"$ref": "#/components/parameters/jobID"
+					}
+				],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/DatabaseRestoreJobRequest"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "Successful operation"
+					},
+					"400": {
+						"description": "Bad Request. Validation exception."
+					}
+				}
+			},
+			"get": {
+				"tags": [
+					"ARM Module"
+				],
+				"summary": "",
+				"description": "[Public] ARM Database Restore Manager",
+				"operationId": "Relativity.ARM.Services.Interfaces.IArmDatabaseRestoreJobManager.ReadAsync",
+				"parameters": [
+					{
+						"$ref": "#/components/parameters/X-CSRF-Header"
+					},
+					{
+						"$ref": "#/components/parameters/jobID"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful operation",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/DatabaseRestoreJobResponse"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "Bad Request. Job Not Found."
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"ARM Module"
+				],
+				"summary": "",
+				"description": "[Public] ARM Database Restore Manager",
+				"operationId": "Relativity.ARM.Services.Interfaces.IArmDatabaseRestoreJobManager.DeleteAsync",
+				"parameters": [
+					{
+						"$ref": "#/components/parameters/X-CSRF-Header"
+					},
+					{
+						"$ref": "#/components/parameters/jobID"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful operation"
+					},
+					"400": {
+						"description": "Bad Request. Job Not Found."
+					}
+				}
+			}
+		},
+		"/relativity-arm/V1/jobs/{jobID}/run": {
+			"post": {
+				"tags": [
+					"ARM Module"
+				],
+				"summary": "",
+				"description": "[Public] ARM Job Actions Manager",
+				"operationId": "Relativity.ARM.Services.Interfaces.IArmJobActionManager.RunAsync",
+				"parameters": [
+					{
+						"$ref": "#/components/parameters/X-CSRF-Header"
+					},
+					{
+						"$ref": "#/components/parameters/jobID"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful operation"
+					},
+					"400": {
+						"description": "Bad Request. Validation exception."
+					},
+					"500": {
+						"description": "Job is already running"
+					}
+				}
+			}
+		},
+		"/relativity-arm/V1/jobs/{jobID}/cancel": {
+			"post": {
+				"tags": [
+					"ARM Module"
+				],
+				"summary": "",
+				"description": "[Public] ARM Job Actions Manager",
+				"operationId": "Relativity.ARM.Services.Interfaces.IArmJobActionManager.CancelAsync",
+				"parameters": [
+					{
+						"$ref": "#/components/parameters/X-CSRF-Header"
+					},
+					{
+						"$ref": "#/components/parameters/jobID"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful operation"
+					},
+					"400": {
+						"description": "Bad Request. Validation exception."
+					},
+					"500": {
+						"description": "Job is already completed"
+					}
+				}
+			}
+		},
+		"/relativity-arm/V1/jobs/{jobID}/pause": {
+			"post": {
+				"tags": [
+					"ARM Module"
+				],
+				"summary": "",
+				"description": "[Public] ARM Job Actions Manager",
+				"operationId": "Relativity.ARM.Services.Interfaces.IArmJobActionManager.PauseAsync",
+				"parameters": [
+					{
+						"$ref": "#/components/parameters/X-CSRF-Header"
+					},
+					{
+						"$ref": "#/components/parameters/jobID"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful operation"
+					},
+					"400": {
+						"description": "Bad Request. Validation exception."
+					},
+					"500": {
+						"description": "Job is already completed"
+					}
+				}
+			}
+		},
+		"/relativity-arm/V1/jobs/{jobID}/terminate": {
+			"delete": {
+				"tags": [
+					"ARM Module"
+				],
+				"summary": "",
+				"description": "[Public] ARM Job Actions Manager",
+				"operationId": "Relativity.ARM.Services.Interfaces.IArmJobActionManager.TerminateJobAsync",
+				"parameters": [
+					{
+						"$ref": "#/components/parameters/X-CSRF-Header"
+					},
+					{
+						"$ref": "#/components/parameters/jobID"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful operation"
+					},
+					"400": {
+						"description": "Bad Request. Validation exception."
+					},
+					"404": {
+						"description": "Bad Request. Job not found exception."
+					}
+				}
+			}
+		},
+		"/relativity-arm/V1/jobs/{jobID}/status": {
+			"get": {
+				"tags": [
+					"ARM Module"
+				],
+				"summary": "",
+				"description": "[Public] Arm Job Status Manager",
+				"operationId": "Relativity.ARM.Services.Interfaces.IArmJobStatusManager.ReadAsync",
+				"parameters": [
+					{
+						"$ref": "#/components/parameters/X-CSRF-Header"
+					},
+					{
+						"$ref": "#/components/parameters/jobID"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful operation",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ArmJobStatusResponse"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "Bad Request. Job Not Found."
+					}
+				}
+			}
+		},
+		"/relativity-arm/V1/jobs/{jobID}/logs": {
+			"get": {
+				"tags": [
+					"ARM Module"
+				],
+				"summary": "",
+				"description": "[Public] ARM Job Information Manager",
+				"operationId": "Relativity.ARM.Services.Interfaces.IArmJobInformationManager.DownloadLogAsync",
+				"parameters": [
+					{
+						"$ref": "#/components/parameters/X-CSRF-Header"
+					},
+					{
+						"$ref": "#/components/parameters/jobID"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful operation",
+						"content": {
+							"application/octet-stream": {
+								"schema": {
+									"type": "string",
+									"format": "binary"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "Bad Request. Job Not Found."
+					}
+				}
+			}
+		},
+		"/relativity-arm/V1/jobs/{jobExecutionId}/statistics": {
+			"get": {
+				"tags": [
+					"ARM Module"
+				],
+				"summary": "",
+				"description": "[Public] ARM Job Information Manager",
+				"operationId": "Relativity.ARM.Services.Interfaces.IArmJobInformationManager.GetJobStatisticsAsync",
+				"parameters": [
+					{
+						"$ref": "#/components/parameters/X-CSRF-Header"
+					},
+					{
+						"$ref": "#/components/parameters/jobExecutionId" 
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful operation",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/JobStatistics"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "Bad request. Validation error." 
+					}, 
+					"404": {
+						"description": "Job Not Found."
+					}
+				}
+			}
+		},
+		"/relativity-arm/V1/jobs/{jobExecutionId}/qualityCheckResult":{
+			"get": {
+				"tags": [
+					"ARM Module"
+				],
+				"summary": "",
+				"description": "[Public] ARM Job Information Manager",
+				"operationId": "Relativity.ARM.Services.Interfaces.IArmJobInformationManager.GetQualityCheckResultAsync",
+				"parameters": [
+					{
+						"$ref": "#/components/parameters/X-CSRF-Header"
+					},
+					{
+						"$ref": "#/components/parameters/jobExecutionId" 
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful operation",
+						"content": {
+							"application/json":{
+								"schema":{
+									"items":{
+										"$ref": "#/components/schemas/QualityCheckResult"
+									}
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "Bad request. Validation error." 
+					}, 
+					"404": {
+						"description": "Job Not Found."
+					}
+				}
+			}
+
+		},
+		"/relativity-arm/V1/archive-information": {
+			"post": {
+				"tags": [
+					"ARM Module"
+				],
+				"summary": "",
+				"description": "[Public] Arm Archive Information Manager",
+				"operationId": "Relativity.ARM.Services.Interfaces.IArmArchiveInformationManager.ReadAsync",
+				"parameters": [
+					{
+						"$ref": "#/components/parameters/X-CSRF-Header"
+					}
+				],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ArchiveInformationRequest"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "Successful operation",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ArchiveInformationResponse"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "Path Not Found."
+					},
+					"400": {
+						"description": "Archive path is null or empty in the request"
+					}
+				}
+			}
+		},
+		"/relativity-arm/V1/tasks/{taskId}/retry": {
+			"post": {
+				"tags": [
+					"ARM Module"
+				],
+				"summary": "",
+				"description": "[Public] Arm Task Action Manager",
+				"operationId": "Relativity.ARM.Services.Interfaces.IArmTaskActionManager.RetryFailedTaskAsync",
+				"parameters": [
+					{
+						"$ref": "#/components/parameters/X-CSRF-Header"
+					},
+					{
+						"$ref": "#/components/parameters/taskId"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Successful operation"
+					},
+					"400": {
+						"description": "Bad Request. Validation exception."
+					},
+					"404": {
+						"description": "Not found"
+					}
+				}
+			}
+		}
+	},
+    "components": {
+		"parameters": {
+			"X-CSRF-Header": {
+				"name": "X-CSRF-Header",
+				"in": "header",
+				"description": "Required CSRF header for any KeplerService. *Note: Actual string value does not matter*. ",
+				"required": true,
+				"schema": {
+					"type": "string",
+					"format": "System.String",
+					"default": "."
+				}
+			},
+			"jobID": {
+				"name": "jobID",
+				"in": "path",
+				"description": "No description set for this parameter",
+				"required": true,
+				"schema": {
+					"type": "integer"
+				},
+				"example": "23"
+			},
+			"jobExecutionId": {
+				"name": "jobExecutionId",
+				"in": "path",
+				"description": "JobExecutionId of a job.",
+				"required": true,
+				"schema": {
+					"type": "integer"
+				},
+				"example": "23"
+			},
+			"pathToArchive": {
+				"name": "pathToArchive",
+				"in": "path",
+				"required": true,
+				"schema": {
+					"type": "string"
+				},
+				"example": "////emttest//DefaultFileRepository//arm//1014823_New_Case_Template_20200410063743"
+			},
+			"taskId": {
+				"name": "taskId",
+				"in": "path",
+				"description": "Id of a task that should by retry",
+				"required": true,
+				"schema": {
+					"type": "number"
+				},
+				"example": "23"
+			}
+		},
+		"schemas": {
+			"ArchiveJobRequest": {
+				"type": "object",
+				"description": "Request to create new Archive job",
+				"required": [
+					"WorkspaceID",
+					"ArchiveDirectory"
+				],
+				"properties": {
+					"request": {
+						"type": "object",
+						"properties": {
+							"WorkspaceID": {
+								"type": "integer",
+								"format": "int32",
+								"example": "1014823"
+							},
+							"ArchiveDirectory": {
+								"type": "string",
+								"description": "Gets or sets ARM Archive Directory. Please note that when 'UseDefaultArchiveDirectory' is set to true, this value should be null or empty.",
+								"example": "\\\\emttest\\DefaultFileRepository\\arm"
+							},
+							"JobPriority": {
+								"$ref": "#/components/schemas/JobPriority",
+								"description": "Gets or sets Job Priority. The priority is used to determine which order the ARM agents will attempt to  complete tasks for each job that is running concurrent to another model. If multiple models are running simultaneously with the same priority, the ARM agent will prioritize whichever model was created first."
+							},
+							"ScheduledStartTime": {
+								"type": "string",
+								"format": "date-time",
+								"example": "2099-03-24 15:03:23.673"
+							},
+							"MigratorOptions": {
+								"$ref": "#/components/schemas/MigratorOptions"
+							},
+							"FileOptions": {
+								"$ref": "#/components/schemas/FileOptions"
+							},
+							"ProcessingOptions": {
+								"$ref": "#/components/schemas/ProcessingOptions"
+							},
+							"ExtendedWorkspaceDataOptions": {
+								"$ref": "#/components/schemas/ExtendedWorkspaceDataOptions"
+							},
+							"NotificationOptions": {
+								"$ref": "#/components/schemas/NotificationOptions"
+							},
+							"UiJobActionsLocked": {
+								"type": "boolean",
+								"example": "true",
+								"description": "When creating a job with this option set to true, user won't have job actions like: Run, Cancel etc. available on UI."
+							},
+							"UseDefaultArchiveDirectory":{
+								"type": "boolean",
+								"example": "false",
+								"description": "This flag tells ARM to select first valid archive directory from the configuration. When this flag is set to true do not set 'ArchiveDirectory' parameter itself. "
+							}
+						}
+					}
+				}
+			},
+			"ArchiveJobResponse": {
+				"title": "ArchiveJobResponse",
+				"type": "object",
+				"properties": {
+					"JobID": {
+						"type": "integer",
+						"format": "int32",
+						"description": "ARM Job ID",
+						"example": "1"
+					},
+					"JobName": {
+						"type": "string",
+						"description": "ARM Job name",
+						"example": "Archive New Case Template (1014823) Workspace"
+					},
+					"JobExecutionID": {
+						"type": "integer",
+						"format": "int32",
+						"example": "32"
+					},
+					"JobExecutionGuid": {
+						"type": "string",
+						"format": "System.GUID",
+						"example": "8C8C08A3-DAB8-4E91-A1A0-6F626BF2AE1B"
+					},
+					"ArchivePath": {
+						"type": "string",
+						"example": "\\\\emttest\\DefaultFileRepository\\arm\\1014823_New_Case_Template_20200409145857"
+					},
+					"WorkspaceID": {
+						"type": "integer",
+						"format": "int32",
+						"example": "1234567"
+					},
+					"ScheduledStartTime": {
+						"type": "string",
+						"format": "date-time",
+						"example": "2020-03-24 15:03:23.673"
+					},
+					"JobDetails": {
+						"$ref": "#/components/schemas/JobDetails"
+					},
+					"MigratorOptions": {
+						"$ref": "#/components/schemas/MigratorOptions"
+					},
+					"FileOptions": {
+						"$ref": "#/components/schemas/FileOptions"
+					},
+					"ProcessingOptions": {
+						"$ref": "#/components/schemas/ProcessingOptions"
+					},
+					"ExtendedWorkspaceDataOptions": {
+						"$ref": "#/components/schemas/ExtendedWorkspaceDataOptions"
+					},
+					"NotificationOptions": {
+						"$ref": "#/components/schemas/NotificationOptions"
+					},
+					"UiJobActionsLocked": {
+						"type": "boolean",
+						"example": "true",
+						"description": "When this option set to true, user won't have job actions like: Run, Cancel etc. available on UI."
+					}
+				}
+			},
+			"RestoreJobRequest": {
+				"type": "object",
+				"required": [
+					"request"
+				],
+				"properties": {
+					"request": {
+						"type": "object",
+						"required": [
+							"ArchivePath",
+							"DestinationOptions",
+							"UserMapping",
+							"GroupMapping"
+						],
+						"properties": {
+							"ArchivePath": {
+								"type": "string",
+								"description": "Gets or sets path to the archive",
+								"example": "\\\\emttest\\DefaultFileRepository\\arm\\1014823_New_Case_Template_20200410072257"
+							},
+							"JobPriority": {
+								"$ref": "#/components/schemas/JobPriority",
+								"description": "Gets or sets Job Priority. The priority is used to determine which order the ARM agents will attempt to  complete tasks for each job that is running concurrent to another model. If multiple models are running simultaneously with the same priority, the ARM agent will prioritize whichever model was created first."
+							},
+							"ScheduledStartTime": {
+								"type": "string",
+								"format": "date-time",
+								"example": "2099-03-24 15:03:23.673"
+							},
+							"ExistingTargetDatabase": {
+								"type": "string",
+								"description": " Gets or sets existing target database restored manually on sqlserver from database backup of archived workspace, done independently from ARM archive. Required if archive doesn't have a database backup - look for backless restore in ARM help. It has to be in format EDDSxxx where xxx is any number (database names has to have unique names across sqlserver)",
+								"example": "EDDS1234567"
+							},
+							"DestinationOptions": {
+								"$ref": "#/components/schemas/RestoreDestinationOptions"
+							},
+							"MigratorsDestinationOptions": {
+								"$ref": "#/components/schemas/MigratorsDestinationOptions"
+							},
+							"AdvancedFileOptions": {
+								"$ref": "#/components/schemas/AdvancedFileOptions"
+							},
+							"UserMapping": {
+								"$ref": "#/components/schemas/UserMapping"
+							},
+							"GroupMapping": {
+								"$ref": "#/components/schemas/GroupMapping"
+							},
+							"Applications": {
+								"type": "array",
+								"items": {
+									"$ref": "#/components/schemas/ApplicationSettings"
+								}
+							},
+							"NotificationOptions": {
+								"$ref": "#/components/schemas/NotificationOptions"
+							},
+							"FileShareOptions": {
+								"$ref": "#/components/schemas/FileShareOptions"
+							},
+							"UiJobActionsLocked": {
+								"type": "boolean",
+								"example": "true",
+								"description": "When creating a job with this option set to true, user won't have job actions like: Run, Cancel etc. available on UI."
+							}
+						}
+					}
+				}
+			},
+			"RestoreJobResponse": {
+				"type": "object",
+				"properties": {
+					"JobID": {
+						"type": "integer",
+						"format": "int32",
+						"description": "ARM Job ID",
+						"example": "1"
+					},
+					"JobName": {
+						"type": "string",
+						"description": "ARM Job name",
+						"example": "Archive New Case Template (1014823) Workspace"
+					},
+					"JobExecutionID": {
+						"type": "integer",
+						"format": "int32",
+						"example": "32"
+					},
+					"JobExecutionGuid": {
+						"type": "string",
+						"format": "System.GUID",
+						"example": "8C8C08A3-DAB8-4E91-A1A0-6F626BF2AE1B"
+					},
+					"ArchivePath": {
+						"type": "string",
+						"example": "\\\\emtest\\fileshare\\arm\\1014823_New_Case_Template_20200324150323"
+					},
+					"ScheduledStartTime": {
+						"type": "string",
+						"format": "date-time",
+						"example": "2099-03-24 15:03:23.673"
+					},
+					"SourceWorkspace": {
+						"type": "string",
+						"description": "Gets or sets the name of the source workspace.",
+						"example": "New_Case_Template"
+					},
+					"DestinationWorkspaceID": {
+						"type": "integer",
+						"format": "int32",
+						"example": "1234567"
+					},
+					"ExistingTargetDatabase": {
+						"type": "string",
+						"description": " existing target database restored manually on sqlserver from database backup of archived workspace, done independently from ARM archive. Required if archive doesn't have a database backup - look for backless restore in ARM help. It has to be in format EDDSxxx where xxx is any number (database names has to have unique names across sqlserver)",
+						"example": "EDDS1234567"
+					},
+					"JobDetails": {
+						"$ref": "#/components/schemas/JobDetails"
+					},
+					"DestinationOptions": {
+						"$ref": "#/components/schemas/RestoreDestinationOptions"
+					},
+					"MigratorsDestinationOptions": {
+						"$ref": "#/components/schemas/MigratorsDestinationOptions"
+					},
+					"AdvancedFileOptions": {
+						"$ref": "#/components/schemas/AdvancedFileOptions"
+					},
+					"UserMappings": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/UserMap"
+						}
+					},
+					"GroupMappings": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/GroupMap"
+						}
+					},
+					"Applications": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/ApplicationSettingsResponse"
+						}
+					},
+					"NotificationOptions": {
+						"$ref": "#/components/schemas/NotificationOptions"
+					},
+					"UiJobActionsLocked": {
+						"type": "boolean",
+						"example": "true",
+						"description": "When this option set to true, user won't have job actions like: Run, Cancel etc. available on UI."
+					}
+				}
+			},
+			"DatabaseRestoreJobRequest": {
+				"type": "object",
+				"required": ["SourceDatabase"],
+				"properties": {
+					"request": {
+						"type": "object",
+						"properties": {
+							"SourceDatabase": {
+								"type": "string",
+								"description": "Database name that will be converted to workspace",
+								"example": "EDDS12345678"
+							},
+							"JobPriority": {
+								"$ref": "#/components/schemas/JobPriority",
+								"description": "Gets or sets Job Priority. The priority is used to determine which order the ARM agents will attempt to  complete tasks for each job that is running concurrent to another model. If multiple models are running simultaneously with the same priority, the ARM agent will prioritize whichever model was created first."
+							},
+							"ScheduledStartTime": {
+								"type": "string",
+								"format": "date-time",
+								"example": "2099-03-24 15:03:23.673"
+							},
+							"DestinationOptions": {
+								"$ref": "#/components/schemas/RestoreDestinationOptions"
+							},
+							"UserMapping": {
+								"$ref": "#/components/schemas/UserMapping"
+							},
+							"GroupMapping": {
+								"$ref": "#/components/schemas/GroupMapping"
+							},
+							"NotificationOptions": {
+								"$ref": "#/components/schemas/NotificationOptions"
+							},
+							"UiJobActionsLocked": {
+								"type": "boolean",
+								"example": "true",
+								"description": "When creating a job with this option set to true, user won't have job actions like: Run, Cancel etc. available on UI."
+							}
+						}
+					}
+				}
+			},
+			"DatabaseRestoreJobResponse": {
+				"type": "object",
+				"properties": {
+					"JobID": {
+						"type": "integer",
+						"format": "int32",
+						"description": "ARM Job ID",
+						"example": "1"
+					},
+					"JobName": {
+						"type": "string",
+						"description": "ARM Job name",
+						"example": "Archive New Case Template (1014823) Workspace"
+					},
+					"JobExecutionID": {
+						"type": "integer",
+						"format": "int32",
+						"example": "32"
+					},
+					"JobExecutionGuid": {
+						"type": "string",
+						"format": "System.GUID",
+						"example": "8C8C08A3-DAB8-4E91-A1A0-6F626BF2AE1B"
+					},
+					"ScheduledStartTime": {
+						"type": "string",
+						"format": "date-time",
+						"example": "2020-03-24 15:03:23.673"
+					},
+					"DestinationWorkspaceID": {
+						"type": "integer",
+						"format": "int32",
+						"example": "1234567"
+					},
+					"JobDetails": {
+						"$ref": "#/components/schemas/JobDetails"
+					},
+					"DestinationOptions": {
+						"$ref": "#/components/schemas/RestoreDestinationOptions"
+					},
+					"UserMappings": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/UserMap"
+						}
+					},
+					"GroupMappings": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/GroupMap"
+						}
+					},
+					"NotificationOptions": {
+						"$ref": "#/components/schemas/NotificationOptions"
+					},
+					"UiJobActionsLocked": {
+						"type": "boolean",
+						"example": "true",
+						"description": "When this option set to true, user won't have job actions like: Run, Cancel etc. available on UI."
+					}
+				}
+			},
+			"NotificationOptions": {
+				"title": "NotificationOptions",
+				"type": "object",
+				"properties": {
+					"NotifyJobCreator": {
+						"type": "boolean",
+						"example": "false",
+						"description": "Gets or sets a value indicating whether to send a notification to the user that created the job for each major event encountered by the model. Possible values include: started, paused, canceled, completed successfully, or failed in error."
+					},
+					"NotifyJobExecutor": {
+						"type": "boolean",
+						"example": "true",
+						"description": "Value indicating whether send a notification to the user that executed the job for each major event encountered by the model. Possible values include: completed successfully or failed in error."
+					}
+				}
+			},
+			"FileShareOptions": {
+				"title": "FileShareOptions",
+				"type": "object",
+				"properties": {
+					"Fqdn": {
+						"type": "string",
+						"example": "//files.t000.ctus000000.r1.kcura.com/T000/Files/",
+						"description": "Gets or sets the location of the file share to be mount in order to access the archive. Must be FQDN and support Samba."
+					},
+					"SecretPath": {
+						"type": "string",
+						"example": "catalog/null_tenant/30f501d6-6761-4189-a994-c8c4559554f2",
+						"description": "Gets or sets the location of the secret store credentials needed to mount the file share."
+					}
+				}
+			},
+			"JobDetails": {
+				"title": "JobDetails",
+				"type": "object",
+				"description": "ARM Job details",
+				"properties": {
+					"CreatedOn": {
+						"type": "string",
+						"format": "date-time",
+						"description": "Job create time.",
+						"example": "2020-03-24 15:03:23.673"
+					},
+					"ModifiedTime": {
+						"type": "string",
+						"format": "date-time",
+						"description": "Job modified time.",
+						"example": "2020-03-24 15:03:23.673"
+					},
+					"SubmittedBy": {
+						"type": "string",
+						"description": "Gets or sets user who submitted job.",
+						"example": "Johan.Strauss@Radetzky.com"
+					},
+					"State": {
+						"$ref": "#/components/schemas/JobState",
+						"description": "Gets or sets job state."
+					},
+					"Priority": {
+						"$ref": "#/components/schemas/JobPriority",
+						"description": "Gets or sets job priority."
+					},
+					"ActionsHistory": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/JobActions"
+						},
+						"description": " Gets or sets job action history."
+					}
+				}
+			},
+			"JobState": {
+				"type": "string",
+				"enum": [
+					"ExecutionRequested",
+					"Pending",
+					"Processing",
+					"ProcessingWithErrors",
+					"Errored",
+					"Complete",
+					"CancellationRequested",
+					"CancellationPending",
+					"CancellationProcessing",
+					"CancellationProcessingWithErrors",
+					"CancellationErrored",
+					"CancellationComplete",
+					"Paused",
+					"NotStarted",
+					"PauseRequested",
+					"RecoveryRequested",
+					"CancellationRecoveryRequested",
+					"Scheduled",
+					"CleaningUp",
+					"Recurring",
+					"ProcessingButAvailable",
+					"Unknown"
+				]
+			},
+			"JobPriority": {
+				"type": "string",
+				"enum": [
+					"Low",
+					"Medium",
+					"High"
+				]
+			},
+			"JobActions": {
+				"type": "object",
+				"properties": {
+					"Date": {
+						"type": "string",
+						"format": "date-time",
+						"example": "2020-03-24 15:03:23.673"
+					},
+					"Type": {
+						"type": "string",
+						"example": "Created"
+					},
+					"UserName": {
+						"type": "string",
+						"example": "Admin, Relativity"
+					}
+				}
+			},
+			"MigratorOptions": {
+				"type": "object",
+				"default": "ARM Archive Job migrators options",
+				"properties": {
+					"IncludeDatabaseBackup": {
+						"type": "boolean",
+						"description": "Gets or sets a value indicating whether workspace database should be included in the archive or not."
+					},
+					"IncludeDtSearch": {
+						"type": "boolean",
+						"description": "Gets or sets a value indicating whether to compress and include dtSearch indexes in the archive directory."
+					},
+					"IncludeConceptualAnalytics": {
+						"type": "boolean",
+						"description": "Gets or sets a value indicating whether Conceptual Analytics migrator should be executed."
+					},
+					"IncludeStructuredAnalytics": {
+						"type": "boolean",
+						"description": "Gets or sets a value indicating whether Structured Analytics migrator should be executed."
+					},
+					"IncludeDataGrid": {
+						"type": "boolean",
+						"description": "Gets or sets a value indicating whether Data Grid migrator should be executed."
+					}
+				}
+			},
+			"FileOptions": {
+				"type": "object",
+				"description": "ARM Archive Job file options",
+				"properties": {
+					"IncludeRepositoryFiles": {
+						"type": "boolean",
+						"description": "Gets or sets a value indicating whether all files included in the workspace repository, including files on file fields, will be archived in the archive directory."
+					},
+					"IncludeLinkedFiles": {
+						"type": "boolean",
+						"description": "Gets or sets a value indicating whether linked files will be placed into the archive directory."
+					},
+					"MissingFileBehavior": {
+						"description": "Gets or sets a value indicating missing file behavior. File behavior can be set to either skip missing files or stop on missing files.",
+						"$ref": "#/components/schemas/MissingFileBehavior"
+					}
+				}
+			},
+			"MissingFileBehavior": {
+				"type": "string",
+				"enum": [
+					"SkipFile",
+					"StopJob"
+				]
+			},
+			"LinkedFileBehavior": {
+				"type": "string",
+				"enum": [
+					"LeaveInPlace",
+					"CopyToRepository",
+					"MoveToRepository"
+				]
+			},
+			"ProcessingOptions": {
+				"description": "ARM Archive Job Processing migrator options",
+				"type": "object",
+				"properties": {
+					"IncludeProcessing": {
+						"type": "boolean",
+						"description": "Gets or sets a value indicating whether Processing migrator should be executed."
+					},
+					"IncludeProcessingFiles": {
+						"type": "boolean",
+						"description": "Gets or sets a value indicating whether all the files and containers that have been Discovered by Processing will be archived and placed in the Invariant directory."
+					},
+					"ProcessingMissingFileBehavior": {
+						"$ref": "#/components/schemas/ProcessingMissingFileBehavior",
+						"description": "Gets or sets a value indicating whether skip missing files or stop on missing files. If there is potential for files to incur an access issue while the job is running, skipping them will result in compiling a list of the files that were missing and allow the model to complete without error. This list is accessible in the archive directory. Setting this to stop will immediately stop on the first missing file and cannot resume until the file is placed in the expected location."
+					}
+				}
+			},
+			"ProcessingMissingFileBehavior": {
+				"type": "string",
+				"enum": [
+					"SkipFile",
+					"StopJob"
+				]
+			},
+			"ExtendedWorkspaceDataOptions": {
+				"type": "object",
+				"description": "ARM Archive Job extended Workspace data options",
+				"properties": {
+					"IncludeExtendedWorkspaceData": {
+						"type": "boolean",
+						"description": "Gets or sets a value indicating whether all admin scripts, non-core applications, and stand-alone resource files will be exported to the archive directory."
+					},
+					"ApplicationErrorExportBehavior": {
+						"$ref": "#/components/schemas/ApplicationErrorExportBehavior",
+						"description": "Gets or sets a value indicating whether skip errored exported applications or stop on errored exported applications."
+					}
+				}
+			},
+			"ApplicationErrorExportBehavior": {
+				"type": "string",
+				"enum": [
+					"SkipApplication",
+					"StopJob"
+				]
+			},
+			"ArmJobStatusResponse": {
+				"type": "object",
+				"properties": {
+					"JobType": {
+						"$ref": "#/components/schemas/JobType",
+						"description": "Gets or sets the job type."
+					},
+					"JobState": {
+						"$ref": "#/components/schemas/JobState",
+						"description": "Gets or sets job state."
+					},
+					"CurrentJobStage": {
+						"$ref": "#/components/schemas/JobStage"
+					},
+					"TotalNumberOfStages": {
+						"type": "integer",
+						"format": "int32",
+						"description": "Gets or sets the number of stages."
+					},
+					"TimeStarted": {
+						"type": "string",
+						"format": "date-time",
+						"description": "Gets or sets the job start time.",
+						"example": "2020-03-24 15:03:23.673"
+					},
+					"TimeCompleted": {
+						"type": "string",
+						"format": "date-time",
+						"description": "Gets or sets the job completed time.",
+						"example": "2020-03-24 15:03:23.673"
+					},
+					"TimeElapsed": {
+						"type": "string",
+						"description": "Gets or sets the job elapsed time.",
+						"example": "1:03:43:15"
+					}
+				}
+			},
+			"JobType": {
+				"type": "string",
+				"enum": [
+					"Archive",
+					"Move",
+					"Restore",
+					"DatabaseRestore"
+				]
+			},
+			"JobStage": {
+				"type": "object",
+				"properties": {
+					"Name": {
+						"type": "string",
+						"description": "Gets or sets the stage name.",
+						"example": "Application Data Migration"
+					},
+					"Order": {
+						"type": "integer",
+						"format": "int32",
+						"description": "Gets or sets the stage order. The numbering starts with 0.",
+						"example": "7"
+					},
+					"NumberOfSucceededTasks": {
+						"type": "integer",
+						"format": "int32",
+						"description": " Gets or sets the number of succeeded tasks within stage",
+						"example": "23"
+					},
+					"NumberOfFailedTasks": {
+						"type": "integer",
+						"format": "int32",
+						"description": "Gets or sets the number of failed tasks",
+						"example": "7"
+					},
+					"TotalNumberOfTasks": {
+						"type": "integer",
+						"format": "int32",
+						"description": "Gets or sets the number of tasks",
+						"example": "42"
+					},
+					"TimeStarted": {
+						"type": "string",
+						"format": "date-time",
+						"description": "Gets or sets the stage start time.",
+						"example": "2020-03-24 15:03:23.673"
+					},
+					"TimeElapsed": {
+						"type": "string",
+						"description": "Gets or sets the stage elapsed time.",
+						"example": "1:03:43:15"
+					},
+					"PercentComplete": {
+						"type": "integer",
+						"format": "int32",
+						"description": "Gets or sets the stage percentage  complete.",
+						"example": "65"
+					},
+					"Errors": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/JobStageError"
+						}
+					}
+				}
+			},
+			"JobStageError": {
+				"type": "object",
+				"properties": {
+					"Message": {
+						"type": "string",
+						"example": "BCP Path is not accessible"
+					},
+					"Exception": {
+						"type": "string",
+						"example": "exception_details_go_here"
+					}
+				}
+			},
+			"DestinationOptions": {
+				"type": "object",
+				"required": [
+					"ResourcePoolID",
+					"CacheLocationID",
+					"FileRepositoryID",
+					"DatabaseServerID"
+				],
+				"properties": {
+					"ResourcePoolID": {
+						"type": "integer",
+						"format": "int32",
+						"description": "Gets or sets a resource pool that the restored workspace will use.",
+						"example": "1015040"
+					},
+					"CacheLocationID": {
+						"type": "integer",
+						"format": "int32",
+						"description": " Gets or sets a cache location that the restored workspace will use.",
+						"example": "1015534"
+					},
+					"FileRepositoryID": {
+						"type": "integer",
+						"format": "int32",
+						"description": "Gets or sets a file repository that the restored workspace will use.",
+						"example": "1014887"
+					},
+					"DatabaseServerID": {
+						"type": "integer",
+						"format": "int32",
+						"description": " Gets or sets a database server artifact id that will be used by the restored workspace.",
+						"example": "1015096"
+					}
+				}
+			},
+			"RestoreDestinationOptions": {
+				"type": "object",
+				"required": [
+					"ResourcePoolID",
+					"MatterID",
+					"CacheLocationID",
+					"FileRepositoryID",
+					"DatabaseServerID"
+				],
+				"properties": {
+					"ResourcePoolID": {
+						"type": "integer",
+						"format": "int32",
+						"description": "Gets or sets a resource pool that the restored workspace will use.",
+						"example": "1015040"
+					},
+					"MatterID": {
+						"type": "integer",
+						"format": "int32",
+						"description": "Gets or sets a matter that the restored workspace will use.",
+						"example": "1000002"
+					},
+					"CacheLocationID": {
+						"type": "integer",
+						"format": "int32",
+						"description": " Gets or sets a cache location that the restored workspace will use.",
+						"example": "1015534"
+					},
+					"FileRepositoryID": {
+						"type": "integer",
+						"format": "int32",
+						"description": "Gets or sets a file repository that the restored workspace will use.",
+						"example": "1014887"
+					},
+					"DatabaseServerID": {
+						"type": "integer",
+						"format": "int32",
+						"description": " Gets or sets a database server artifact id that will be used by the restored workspace.",
+						"example": "1015096"
+					}
+				}
+			},
+			"MigratorsDestinationOptions": {
+				"type": "object",
+				"properties": {
+					"StructuredAnalyticsServerID": {
+						"type": "integer",
+						"format": "int32",
+						"description": "Gets or sets a value for destination Structured Analytics server id",
+						"example": "98273"
+					},
+					"ConceptualAnalyticsServerID": {
+						"type": "integer",
+						"format": "int32",
+						"description": " Gets or sets a value for destination Conceptual Analytics server id",
+						"example": "84772"
+					},
+					"DtSearchLocationID": {
+						"type": "integer",
+						"format": "int32",
+						"description": "Gets or sets a value for destination DtSearch location id",
+						"example": "777128"
+					}
+				}
+			},
+			"AdvancedFileOptions": {
+				"type": "object",
+				"properties": {
+					"ReferenceFilesAsArchiveLinks": {
+						"type": "boolean",
+						"description": "Gets or sets a value indicating whether file locations will be updated to point to their location in the ARM Archive. Enabling this means all archived files will become NonRepository files."
+					},
+					"UpdateRepositoryFilePaths": {
+						"type": "boolean",
+						"description": "Gets or sets a value indicating whether Repository files will have their locations updated in the database."
+					},
+					"UpdateLinkedFilePaths": {
+						"type": "boolean",
+						"description": "Gets or sets a value indicating whether linked (NonRepository) files will have their locations updated."
+					}
+				}
+			},
+			"UserMapping": {
+				"type": "object",
+				"required": ["AutoMapUsers"],
+				"properties": {
+					"AutoMapUsers": {
+						"type": "boolean",
+						"description": "Gets or sets a value indicating whether to auto map users.",
+						"example":"false"
+					},
+					"UserMappings": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/UserMap"
+						},
+						"description": "Gets or sets a collection of user mappings."
+					}
+				}
+			},
+			"GroupMapping": {
+				"type": "object",
+				"required": ["AutoMapGroups"],
+				"properties": {
+					"AutoMapGroups": {
+						"type": "boolean",
+						"description": "Gets or sets a value indicating whether to auto map groups.",
+						"example":"false"
+					},
+					"GroupMappings": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/GroupMap"
+						},
+						"description": "Gets or sets a collection of group mappings."
+					}
+				}
+			},
+			"ApplicationSettings": {
+				"type": "object",
+				"properties": {
+					"Guid": {
+						"type": "string",
+						"description": "Gets or sets the application guid.",
+						"format": "System.GUID",
+						"example": "8C8C08A3-DAB8-4E91-A1A0-6F626BF2AE1B"
+					},
+					"ShouldRestore": {
+						"type": "boolean",
+						"description": "Gets or sets a value indicating whether application should be restored."
+					}
+				}
+			},
+			"ApplicationSettingsResponse": {
+				"type": "object",
+				"properties": {
+					"Name": {
+						"type": "string",
+						"description": "Gets or sets the application name.",
+						"example": "Custom App"
+					},
+					"Guid": {
+						"type": "string",
+						"description": "Gets or sets the application guid.",
+						"format": "System.GUID",
+						"example": "8C8C08A3-DAB8-4E91-A1A0-6F626BF2AE1B"
+					},
+					"ShouldRestore": {
+						"type": "boolean",
+						"description": "Gets or sets a value indicating whether application should be restored."
+					}
+				}
+			},
+			"UserMap": {
+				"type": "object",
+				"properties": {
+					"ArchiveUserID": {
+						"type": "integer",
+						"format": "int32",
+						"description": "Gets or sets archive user artifact id.",
+						"example": "123328"
+					},
+					"InstanceUserID": {
+						"type": "integer",
+						"format": "int32",
+						"description": "Gets or sets destination instance user artifact id.",
+						"example": "123883"
+					}
+				}
+			},
+			"GroupMap": {
+				"type": "object",
+				"properties": {
+					"ArchiveGroupID": {
+						"type": "integer",
+						"format": "int32",
+						"description": "Gets or sets archive group artifact id.",
+						"example": "763289"
+					},
+					"InstanceGroupID": {
+						"type": "integer",
+						"format": "int32",
+						"description": "Gets or sets destination instance group artifact id.",
+						"example": "878843"
+					}
+				}
+			},
+			"ArchiveInformationResponse": {
+				"type": "object",
+				"properties": {
+					"Client": {
+						"$ref": "#/components/schemas/BasicInfo",
+						"description": "Basic information about Client like Name and Number"
+					},
+					"Matter": {
+						"$ref": "#/components/schemas/BasicInfo",
+						"description": "Basic information about Matter like Name and Number"
+					}
+				}
+			},
+			"ArchiveInformationRequest": {
+				"type": "object",
+				"description": "Request to get Archive Information",
+				"required": "ArchivePath",
+				"properties": {
+					"ArchivePath": {
+						"type": "string",
+						"description": "Path to archive to get Client and Matter",
+						"example": "\\\\server\\armarchive\\1014823_New_Case_Template_20200320103044"
+					}
+				}
+			},
+			"BasicInfo": {
+				"type": "object",
+				"description": "Basic information like Name and Number",
+				"properties": {
+					"Name": {
+						"type": "string",
+						"description": "Name"
+					},
+					"Number": {
+						"type": "string",
+						"description":  "Number"
+					}
+				}
+			},
+			"MoveJobRequest": {
+				"type": "object",
+				"description": "Request to create new Move job",
+				"required": [
+					"SourceWorkspaceID",
+					"DestinationOptions",
+					"LinkToExistingDocuments",
+					"MissingFileBehavior"
+				],
+				"properties": {
+					"request": {
+						"type": "object",
+						"properties": {
+							"SourceWorkspaceID": {
+								"type": "integer",
+								"format": "int32",
+								"example": "1014823",
+								"description": "Source Workspace ID"
+							},
+							"JobPriority": {
+								"$ref": "#/components/schemas/JobPriority",
+								"description": "Job Priority. The priority is used to determine which order the ARM agents will attempt to  complete tasks for each job that is running concurrent to another model. If multiple models are running simultaneously with the same priority, the ARM agent will prioritize whichever model was created first."
+							},
+							"DestinationOptions": {
+								"$ref": "#/components/schemas/DestinationOptions",
+								"description": "Destination options"
+							},
+							"ScheduledStartTime": {
+								"type": "string",
+								"format": "date-time",
+								"description": "Scheduled start time",
+								"example": "2099-03-24 15:03:23.673"
+							},
+							"FileOptions": {
+								"$ref": "#/components/schemas/MoveFileOptions",
+								"description": "File behavior options"
+							},
+							"DatabaseOptions": {
+								"$ref": "#/components/schemas/DatabaseOptions",
+								"description": "Database move job options"
+							},
+							"NotificationOptions": {
+								"$ref": "#/components/schemas/NotificationOptions"
+							},
+							"UiJobActionsLocked": {
+								"type": "boolean",
+								"example": "true",
+								"description": "When creating a job with this option set to true, user won't have job actions like: Run, Cancel etc. available on UI."
+							}
+						}
+					}
+				}
+			},
+			"MoveJobResponse": {
+				"title": "MoveJobResponse",
+				"type": "object",
+				"description": "Response of newly created move job",
+				"properties": {
+					"JobID": {
+						"type": "integer",
+						"format": "int32",
+						"example": "23",
+						"description": "The Job id."
+					},
+					"JobName": {
+						"type": "string",
+						"description": "The Job name.",
+						"example": "Move Job"
+					},
+					"JobExecutionID": {
+						"type": "integer",
+						"format": "int32",
+						"example": "23",
+						"description": "The Job execution id."
+					},
+					"JobExecutionGuid": {
+						"type": "string",
+						"format": "System.GUID",
+						"example": "8C8C08A3-DAB8-4E91-A1A0-6F626BF2AE1B"
+					},
+					"ScheduledStartTime": {
+						"type": "string",
+						"format": "date-time",
+						"example": "2099-03-24 15:03:23.673"
+					},
+					"JobDetails": {
+						"$ref": "#/components/schemas/JobDetails"
+					},
+					"SourceOptions": {
+						"$ref": "#/components/schemas/SourceOptions",
+						"description": "Source options"
+					},
+					"DestinationOptions": {
+						"$ref": "#/components/schemas/DestinationOptions",
+						"description": "Destination options"
+					},
+					"FileOptions": {
+						"$ref": "#/components/schemas/MoveFileOptions",
+						"description": "File behavior options"
+					},
+					"DatabaseOptions": {
+						"$ref": "#/components/schemas/DatabaseOptions",
+						"description": "Database move job options"
+					},
+					"NotificationOptions": {
+						"$ref": "#/components/schemas/NotificationOptions"
+					},
+					"UiJobActionsLocked": {
+						"type": "boolean",
+						"example": "true",
+						"description": "When this option set to true, user won't have job actions like: Run, Cancel etc. available on UI."
+					}
+				}
+			},
+			"SourceOptions": {
+				"description": "ARM Move job source workspace options",
+				"type": "object",
+				"properties": {
+					"WorkspaceID": {
+						"type": "integer",
+						"format": "int32",
+						"description": "Gets or sets a workspace that the move job will use.",
+						"example": "1015040"
+					},
+					"ResourcePoolID": {
+						"type": "integer",
+						"format": "int32",
+						"description": "Gets or sets the resource pool of the workspace to be moved.",
+						"example": "1015040"
+					},
+					"CacheLocationID": {
+						"type": "integer",
+						"format": "int32",
+						"description": " Gets or sets the cache location of the workspace to be moved.",
+						"example": "1015534"
+					},
+					"FileRepositoryID": {
+						"type": "integer",
+						"format": "int32",
+						"description": "Gets or sets the file repository of the workspace to be moved.",
+						"example": "1014887"
+					},
+					"DatabaseServerID": {
+						"type": "integer",
+						"format": "int32",
+						"description": " Gets or sets the database server artifact id of the workspace to be moved.",
+						"example": "1015096"
+					}
+				}
+			},
+			"MoveFileOptions":{
+				"description": "ARM Move job options",
+				"type": "object",
+				"properties": {
+					"LinkToExistingDocuments":{
+						"type": "boolean",
+						"description": "Link to existing documents"
+					},
+					"MissingFileBehavior": {
+						"description": "A value indicating missing file behavior. File behavior can be set to either skip missing files or stop on missing files.",
+						"$ref": "#/components/schemas/MissingFileBehavior"
+					},
+					"LinkedFileBehavior": {
+						"description": "A value indicating linked file behavior. File behavior can be set to: leave in place, copy to repository or move to repository.",
+						"$ref": "#/components/schemas/LinkedFileBehavior",
+						"example": "LeaveInPlace"
+					}
+				}
+			},
+			"DatabaseOptions": {
+				"description": "ARM Move job database options",
+				"type": "object",
+				"properties": {
+					"IncludeDatabaseBackup": {
+						"type": "boolean",
+						"description": "Indicates if the workspace database is backed up and used for the new workspace. Defaults to true."
+					},
+					"CustomDatabasePath": {
+						"type": "string",
+						"description": "Indicates the path to a custom database to apply to the new workspace. Required if IncludeDatabaseBackup is false."
+					}
+				}
+			},
+			"JobStatistics": {
+				"type": "object",
+				"properties": {
+					"SourceName": {
+						"description": "The name of the source of items.",
+						"type": "string",
+						"example": "Archive"
+					},
+					"DestinationName": {
+						"description": "The name of the destination for items.",
+						"type": "string",
+						"example": "Repository"
+					},
+					"JobTypeName": {
+						"description": "The name of the job type.",
+						"type": "string",
+						"example": "Restore"
+					},
+					"ArchiveItemStatistics":{
+						"description": "statistics of each item type in this job",
+						"type": "array",
+						"items":{
+							"$ref": "#/components/schemas/ArchiveItemStatistics"
+						}
+					}
+
+				}
+			},
+			"ArchiveItemStatistics": {
+				"description": "Statistics of a certaing archive item",
+				"type": "object",
+				"properties": {
+					"ItemTypeName": {
+						"description": "The name of a item type.",
+						"type": "string",
+						"example": "Document Repository Files"
+					},
+					"SourceItemCount": {
+						"description": "Number of source items.",
+						"type": "integer",
+						"format": "int64",
+						"nullable": true,
+						"example": 12
+					},
+					"DestinationItemCount": {
+						"description": "Number of destination items",
+						"type": "integer",
+						"format": "int64",
+						"nullable": true,
+						"example": 12
+					},
+
+					"MissingItemsCount": {
+						"description": "Number of missing items",
+						"type": "integer",
+						"format": "int64",
+						"nullable": true,
+						"example": 0
+					}
+				}
+			},
+			"QualityCheckResult":{
+				"description": "Result of quality check of a job",
+				"type": "object",
+				"properties": {
+					"Type":{
+						"description": "Type of validator",
+						"type": "string",
+						"example": "File validator"
+					},
+					"Status":{
+						"description": "Status of validation for this validator type",
+						"type": "string",
+						"example": "Success"
+					}
+				}
+			}
+		}
+    }
+}
